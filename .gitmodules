@@ -13,3 +13,9 @@
 [submodule "bundle/vim-easymotion"]
 	path = bundle/vim-easymotion
 	url = https://github.com/easymotion/vim-easymotion
+[submodule "bundle/vim-angular"]
+	path = bundle/vim-angular
+	url = git://github.com/burnettk/vim-angular.git
+[submodule "bundle/javascript-libraries-syntax.vim"]
+	path = bundle/javascript-libraries-syntax.vim
+	url = git://github.com/othree/javascript-libraries-syntax.vim.git
