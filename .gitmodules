@@ -40,3 +40,9 @@
 [submodule "bundle/vim-emmet"]
 	path = bundle/vim-emmet
 	url = https://github.com/mattn/emmet-vim
+[submodule "bundle/vim-css3-syntax"]
+	path = bundle/vim-css3-syntax
+	url = https://github.com/hail2u/vim-css3-syntax.git
+[submodule "bundle/vim-haml"]
+	path = bundle/vim-haml
+	url = https://github.com/tpope/vim-haml
