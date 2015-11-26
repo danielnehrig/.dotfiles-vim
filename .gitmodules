@@ -46,3 +46,6 @@
 [submodule "bundle/vim-haml"]
 	path = bundle/vim-haml
 	url = https://github.com/tpope/vim-haml
+[submodule "bundle/coloresque"]
+	path = bundle/coloresque
+	url = https://github.com/gorodinskiy/vim-coloresque.git
