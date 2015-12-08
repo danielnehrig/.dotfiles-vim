@@ -56,6 +56,9 @@ set incsearch                     " incremental searching
 set ignorecase                    " searches are case insensitive...
 set smartcase                     " ... unless they contain at least one capital letter
 set gdefault                      " have :s///g flag by default on
+let g:gitgutter_sign_column_always = 1
+let g:gitgutter_realtime = 0
+let g:gitgutter_eager = 0
 
 " Time out on key codes but not mappings.
 " Basically this makes terminal Vim work sanely.
