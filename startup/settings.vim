@@ -26,6 +26,7 @@ set mousemodel=popup
 set backspace=2
 set number
 set nocompatible
+set complete=.,w,b,u,t,i,kspell
 
 " Hack to make sql in php hilighting suck less
 let sql_type_default = 'sqlanywhere'
@@ -86,8 +87,8 @@ let g:vdebug_options= {
 \}
 
 
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 0
+let NERDTreeMinimalUI = 0
+let NERDTreeDirArrows = 1
 
 let g:phpcomplete_parse_docblock_comments = 1
 
