@@ -49,3 +49,6 @@
 [submodule "bundle/coloresque"]
 	path = bundle/coloresque
 	url = https://github.com/gorodinskiy/vim-coloresque.git
+[submodule "bundle/nerdtree-git"]
+	path = bundle/nerdtree-git
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin
