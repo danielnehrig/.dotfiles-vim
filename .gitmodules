@@ -52,3 +52,6 @@
 [submodule "bundle/nerdtree-git"]
 	path = bundle/nerdtree-git
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin
+[submodule "bundle/vim-neocomplete"]
+	path = bundle/vim-neocomplete
+	url = https://github.com/Shougo/neocomplete.vim

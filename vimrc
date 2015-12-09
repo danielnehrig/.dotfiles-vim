@@ -32,6 +32,7 @@ source ~/.vim/startup/vim.vim
 source ~/.vim/startup/yaml.vim
 source ~/.vim/startup/html.vim
 
+
 set encoding=utf-8
 set syntax=enable
 set guifont=Liberation_Mono_for_Powerline:h10
