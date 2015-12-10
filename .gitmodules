@@ -55,3 +55,18 @@
 [submodule "bundle/vim-neocomplete"]
 	path = bundle/vim-neocomplete
 	url = https://github.com/Shougo/neocomplete.vim
+[submodule "bundle/vim-capslock"]
+	path = bundle/vim-capslock
+	url = git://github.com/tpope/vim-capslock.git
+[submodule "bundle/vim-tagbar"]
+	path = bundle/vim-tagbar
+	url = https://github.com/majutsushi/tagbar
+[submodule "bundle/vim-easytags"]
+	path = bundle/vim-easytags
+	url = https://github.com/xolox/vim-easytags
+[submodule "bundle/vim-autoclose"]
+	path = bundle/vim-autoclose
+	url = https://github.com/Townk/vim-autoclose
+[submodule "bundle/vim-closetag"]
+	path = bundle/vim-closetag
+	url = https://github.com/vim-scripts/closetag.vim

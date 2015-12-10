@@ -56,7 +56,7 @@ function! ToggleFocusMode()
 		set ruler
         set nu relativenumber
         GitGutterEnable
-		colorscheme skittles_berry "re-call your colorscheme
+		colorscheme skittles_dark "re-call your colorscheme
 	endif
 endfunc
 nnoremap <F1> :call ToggleFocusMode()<cr>
