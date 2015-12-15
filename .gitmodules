@@ -78,4 +78,4 @@
 	url = https://github.com/sheerun/vim-polyglot
 [submodule "bundle/vim-tagbar-css"]
 	path = bundle/vim-tagbar-css
-	url = https://github.com/mtscout6/vim-tagbar-cssun/vim-polyglot
+	url = https://github.com/mtscout6/vim-tagbar-css
