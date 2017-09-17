@@ -27,8 +27,6 @@ source ~/.vim/startup/settings.vim
 
 " Syntax-specific settings
 source ~/.vim/startup/js.vim
-source ~/.vim/startup/php.vim
-source ~/.vim/startup/vim.vim
 source ~/.vim/startup/yaml.vim
 source ~/.vim/startup/html.vim
 
@@ -49,7 +47,7 @@ set expandtab
 set list
 set nowrap
 set nojoinspaces
-set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
+"set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
 set showbreak=↪\
 "" Searching
 set hlsearch                      " highlight matches
