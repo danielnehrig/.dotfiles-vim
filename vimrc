@@ -51,3 +51,4 @@ set tags+=~/.vim/tags/cpp
 set tags+=~/.vim/tags/gl
 set tags+=~/.vim/tags/qt4
 set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
