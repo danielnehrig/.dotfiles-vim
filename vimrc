@@ -1,10 +1,32 @@
-"Pathogen
-call pathogen#runtime_append_all_bundles()
+
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 python from powerline.vim import setup as powerline_setup
 python powerline_setup()
 python del powerline_setup
 
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'tpope/vim-surround.git'
+Plugin 'mattn/emmet-vim'
+Plugin 'airblade/vim-gitgutter.git'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'vim-scripts/argtextobj.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'garbas/vim-snipmate'
+Plugin 'vim-scripts/argtextobj.vim'
+Plugin 'honza/vim-snippets'
+Plugin 'hail2u/vim-css3-syntax.git'
+Plugin 'jasmine/jasmine'
+
+
+call vundle#end()
 
 "============== Custom scripts ===============
 source ~/.vim/after/syntaxcheck.vim
