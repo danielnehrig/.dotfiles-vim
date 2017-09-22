@@ -47,7 +47,11 @@ set showtabline=2
 
 set linespace=0
 set history=1000
+<<<<<<< HEAD
 set list listchars=tab:▸ ,trail:•,extends:❯,precedes:❮
+=======
+"set list listchars=tab:› ,trail:-,extends:>,precedes:<,eol:¬
+>>>>>>> ad1539c3f5482bacdf20d35e26b7e7913c951344
 
 set laststatus=2
 set mouse=a
@@ -86,7 +90,6 @@ endif
 let NERDTreeMinimalUI = 0
 let NERDTreeDirArrows = 1
 
-let g:phpcomplete_parse_docblock_comments = 1
 
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_color_change_percent = 10
@@ -95,6 +98,11 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
 let g:indent_guides_space_guides = 1
 let g:indent_guides_guide_size = 1
 "
+<<<<<<< HEAD
 let g:gitgutter_sign_modified = '≈ '
 let g:gitgutter_sign_removed = '⌐ '
 
+=======
+" let g:gitgutter_sign_modified = '≈ '
+"let g:gitgutter_sign_removed = '⌐ '
+>>>>>>> ad1539c3f5482bacdf20d35e26b7e7913c951344
