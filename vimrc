@@ -27,10 +27,16 @@ source ~/.vim/startup/settings.vim
 
 " Syntax-specific settings
 source ~/.vim/startup/js.vim
+<<<<<<< HEAD
+source ~/.vim/startup/php.vim
+=======
+>>>>>>> ad1539c3f5482bacdf20d35e26b7e7913c951344
 source ~/.vim/startup/yaml.vim
 source ~/.vim/startup/html.vim
 
 
+<<<<<<< HEAD
+=======
 set encoding=utf-8
 set syntax=enable
 set guifont=Liberation_Mono_for_Powerline:h10
@@ -55,13 +61,21 @@ set incsearch                     " incremental searching
 set ignorecase                    " searches are case insensitive...
 set smartcase                     " ... unless they contain at least one capital letter
 set gdefault                      " have :s///g flag by default on
+>>>>>>> ad1539c3f5482bacdf20d35e26b7e7913c951344
 let g:gitgutter_sign_column_always = 1
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
 
+let g:ycm_semantic_triggers = {
+    \   'css': [ 're!^\s{2}', 're!:\s+' ],
+    \ }
+
 " Time out on key codes but not mappings.
 " Basically this makes terminal Vim work sanely.
-set notimeout
-set ttimeout
-set ttimeoutlen=100
 let g:Powerline_symbols="fancy"
+let g:ycm_show_diagnostics_ui = 0
+
+set tags+=~/.vim/tags/tags
+set tags+=~/.vim/tags/cpp
+set tags+=~/.vim/tags/gl
+set tags+=~/.vim/tags/qt4

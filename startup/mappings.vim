@@ -32,9 +32,13 @@ nmap ci, f,cT,
 nmap da, f,ld2F,i,<ESC>l "delete argument 
 nmap ca, f,ld2F,i,<ESC>a "delete arg and insert
 
+<<<<<<< HEAD
+" delete surrounding characters
+=======
 
 nmap cu ct_
 nmap cU cf_
+>>>>>>> ad1539c3f5482bacdf20d35e26b7e7913c951344
 
 " upper or lowercase the current word
 nmap g^ gUiW
@@ -74,6 +78,10 @@ nmap <Leader>c" "_di"Pa
 nmap <Leader>r' '_di'P
 nmap <Leader>c' '_di'Pa
 
+imap <C-J>s <Plug>snipMateNextOrTrigger
+
+" Build C
+map <F8> :w <CR> :!clear; gcc % -o %< && ./%< <CR>
 autocmd FileType twig imap <leader>a[ [{[  ]}]<ESC>Bhi
 
 nmap ]h <Plug>GitGutterNextHunk

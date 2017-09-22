@@ -31,12 +31,6 @@ function! EnsureDirExists ()
 	endif
 endfunction
 
-" screen stuff
-fun! s:Sinit(filen)
-	echo expand(a:filen)
-	exec "ScreenShell cd " . expand(a:filen) . "; \\clear"
-endfun
-
 """ FocusMode
 function! ToggleFocusMode()
 	if (&foldcolumn != 12)

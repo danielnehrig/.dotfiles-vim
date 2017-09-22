@@ -5,8 +5,12 @@ set showcmd
 set ruler
 set incsearch
 set wildmenu
-syntax enable
+set syntax=enable
+set noshowmode
+set autoread
+set encoding=utf-8
 set synmaxcol=0
+set nojoinspaces
 set term=screen-256color
 set display=uhex
 set shortmess=aAIsT
@@ -39,20 +43,35 @@ set tabstop=4
 set shiftwidth=4
 set foldcolumn=1
 set cc=+1,+2
+set showtabline=2
 
 set linespace=0
 set history=1000
+<<<<<<< HEAD
+set list listchars=tab:▸ ,trail:•,extends:❯,precedes:❮
+=======
 "set list listchars=tab:› ,trail:-,extends:>,precedes:<,eol:¬
+>>>>>>> ad1539c3f5482bacdf20d35e26b7e7913c951344
 
 set laststatus=2
-set ffs=unix,dos
 set mouse=a
 set vb
 set ttym=xterm2
+set ffs=unix,dos
+set ff=unix
 
 set wrap
 
-set tags=./tags
+set notimeout
+set ttimeout
+set ttimeoutlen=100
+
+"" Searching
+set hlsearch                      " highlight matches
+set incsearch                     " incremental searching
+set ignorecase                    " searches are case insensitive...
+set smartcase                     " ... unless they contain at least one capital letter
+set gdefault                      " have :s///g flag by default on
 
 if version > 720
 	set undofile
@@ -68,25 +87,6 @@ else
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
-let g:vdebug_options= {
-	\    "port" : 9000,
-	\    "server" : 'localhost',
-	\    "timeout" : 20,
-	\    "on_close" : 'detach',
-	\    "break_on_open" : 1,
-	\    "ide_key" : '',
-	\    "path_maps" : {},
-	\    "debug_window_level" : 0,
-	\    "debug_file_level" : 0,
-	\    "debug_file" : "",
-	\    "watch_window_style" : 'compact',
-	\    "marker_default" : '*',
-	\    "marker_closed_tree" : '+',
-	\    "marker_open_tree" : '━',
-	\    "continuous_mode" : 0
-\}
-
-
 let NERDTreeMinimalUI = 0
 let NERDTreeDirArrows = 1
 
@@ -98,5 +98,11 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
 let g:indent_guides_space_guides = 1
 let g:indent_guides_guide_size = 1
 "
+<<<<<<< HEAD
+let g:gitgutter_sign_modified = '≈ '
+let g:gitgutter_sign_removed = '⌐ '
+
+=======
 " let g:gitgutter_sign_modified = '≈ '
 "let g:gitgutter_sign_removed = '⌐ '
+>>>>>>> ad1539c3f5482bacdf20d35e26b7e7913c951344
