@@ -50,3 +50,4 @@ set tags+=~/.vim/tags/tags
 set tags+=~/.vim/tags/cpp
 set tags+=~/.vim/tags/gl
 set tags+=~/.vim/tags/qt4
+set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
