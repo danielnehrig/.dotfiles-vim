@@ -13,6 +13,7 @@ source ~/.vim/after/syntaxcheck.vim
 "============== Filetype stuff ===============
 filetype plugin on
 filetype indent on
+syntax enable
 
 "============== Script configs ===============
 let NERDTreeMinimalUI=1

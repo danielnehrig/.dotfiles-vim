@@ -20,7 +20,6 @@ if &diff
 	set wrap
 endif
 set diffopt+=iwhite
-let &scrolloff=999-&scrolloff
 set smartcase
 set relativenumber
 set nowritebackup
@@ -47,7 +46,6 @@ set showtabline=2
 
 set linespace=0
 set history=1000
-set list listchars=tab:▸ ,trail:•,extends:❯,precedes:❮
 
 set laststatus=2
 set mouse=a
