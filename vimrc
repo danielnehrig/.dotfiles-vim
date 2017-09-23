@@ -20,7 +20,6 @@ Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'garbas/vim-snipmate'
-Plugin 'vim-scripts/argtextobj.vim'
 Plugin 'honza/vim-snippets'
 Plugin 'hail2u/vim-css3-syntax.git'
 Plugin 'jasmine/jasmine'
@@ -57,7 +56,7 @@ source ~/.vim/startup/yaml.vim
 source ~/.vim/startup/html.vim
 
 
-let g:gitgutter_sign_column_always = 1
+set signcolumn=yes
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
 
