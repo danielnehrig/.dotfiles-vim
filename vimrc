@@ -2,12 +2,12 @@
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
 
 python from powerline.vim import setup as powerline_setup
 python powerline_setup()
 python del powerline_setup
 
+call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Valloric/YouCompleteMe'
@@ -24,6 +24,8 @@ Plugin 'vim-scripts/argtextobj.vim'
 Plugin 'honza/vim-snippets'
 Plugin 'hail2u/vim-css3-syntax.git'
 Plugin 'jasmine/jasmine'
+Plugin 'MarcWeber/vim-addon-mw-utils.git'
+Plugin 'nathanaelkane/vim-indent-guides.git'
 
 
 call vundle#end()
