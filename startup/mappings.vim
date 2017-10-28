@@ -75,8 +75,15 @@ nmap <Leader>c' '_di'Pa
 imap <C-J>s <Plug>snipMateNextOrTrigger
 
 " Build C
-map <F8> :w <CR> :!clear; gcc % -o %< && ./%< <CR>
+autocmd FileType c map <F8> :w <CR> :!clear; gcc % -o %< && ./%< <CR>
+" Build Java
+autocmd FileType java map <F8> :w <CR> :!clear; javac % && java %< <CR>
+" Build Groovy
+autocmd FileType groovy map <F8> :w <CR> :!clear; groovy % <CR>
 autocmd FileType twig imap <leader>a[ [{[  ]}]<ESC>Bhi
 
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
+
+nmap <Leader>n :NERDTreeToggle<CR>
+nmap <F9> :TagbarToggle<CR>

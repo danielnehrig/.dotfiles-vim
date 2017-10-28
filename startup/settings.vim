@@ -16,6 +16,7 @@ set display=uhex
 set shortmess=aAIsT
 set cmdheight=2
 set nowrap
+set path+=**
 if &diff
 	set wrap
 endif

@@ -1,4 +1,3 @@
-
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -9,6 +8,17 @@ python del powerline_setup
 
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'moll/vim-node'
+Plugin 'vim-scripts/SyntaxComplete'
+Plugin 'isRuslan/vim-es6'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'othree/yajs.vim'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'vim-scripts/JavaScript-Indent'
+Plugin 'myhere/vim-nodejs-complete'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'godlygeek/tabular'
+"Plugin 'hallettj/jslint.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-surround.git'
@@ -19,14 +29,26 @@ Plugin 'vim-scripts/argtextobj.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'MarcWeber/vim-addon-mw-utils.git'
+Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'hail2u/vim-css3-syntax.git'
 Plugin 'jasmine/jasmine'
-Plugin 'MarcWeber/vim-addon-mw-utils.git'
 Plugin 'nathanaelkane/vim-indent-guides.git'
-
-
+Plugin 'majutsushi/tagbar'
+Plugin 'xolox/vim-easytags'
+Plugin 'xolox/vim-misc'
+Plugin 'mtscout6/vim-tagbar-css'
+Plugin 'kien/ctrlp.vim'
+Plugin 'vim-scripts/a.vim'
+Plugin 'justinmk/vim-syntax-extra'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'tpope/vim-haml'
+"Bundle 'bbchung/clighter8'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'ternjs/tern_for_vim'
+Plugin 'jamescarr/snipmate-nodejs'
 call vundle#end()
 
 "============== Custom scripts ===============
@@ -62,8 +84,15 @@ let g:gitgutter_eager = 0
 
 let g:ycm_semantic_triggers = {
     \   'css': [ 're!^\s{2}', 're!:\s+' ],
+    \   'scss': [ 're!\s{2}', 're!:\s+' ],
+    \   'sass': [ 're!\s{2}', 're!:\s+' ],
+    \   'js': [ 're!.', 're!=\s+' ],
     \ }
 
+let g:nodejs_complete_config = {
+            \  'js_compl_fn': 'jscomplete#CompleteJS',
+            \  'max_node_compl_len': 15
+            \}
 " Time out on key codes but not mappings.
 " Basically this makes terminal Vim work sanely.
 let g:Powerline_symbols="fancy"
@@ -73,5 +102,8 @@ set tags+=~/.vim/tags/tags
 set tags+=~/.vim/tags/cpp
 set tags+=~/.vim/tags/gl
 set tags+=~/.vim/tags/qt4
+set tags+=./tags
 set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:EclimCompletionMethod = 'omnifunc'
+"let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
