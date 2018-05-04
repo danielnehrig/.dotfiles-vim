@@ -39,8 +39,8 @@ set enc=utf-8
 set fillchars=vert:¦
 
 set expandtab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set foldcolumn=1
 set cc=+1,+2
 set showtabline=2
@@ -96,4 +96,5 @@ let g:indent_guides_guide_size = 1
 "
 let g:gitgutter_sign_modified = '≈ '
 let g:gitgutter_sign_removed = '⌐ '
+let g:syntastic_javascript_checkers = ['eslint']
 

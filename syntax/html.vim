@@ -289,4 +289,10 @@ if main_syntax == 'html'
   unlet main_syntax
 endif
 
+
+unlet b:current_syntax
+syn include @HTML $VIMRUNTIME/syntax/html.vim
+syn region htmlTemplate start=+<script [^>]*type *=[^>]*text/template[^>]*>+
+            \                       end=+</script>+me=s-1 keepend
+            \                       contains=@HTML,htmlScriptTag,@htmlPreproc
 " vim: ts=8

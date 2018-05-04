@@ -2,7 +2,7 @@
     "plugins": {
         "es_modules": {},
         "node": {},
-        "node-exptress": {},
+        "node-express": {},
         "requirejs": {
             "baseURL": "./",
             "paths": {}
