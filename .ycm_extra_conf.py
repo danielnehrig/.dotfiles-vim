@@ -18,7 +18,8 @@ BASE_FLAGS = [
         '-xc++',
         '-I/usr/lib/',
         '-I/usr/include/',
-        '-I/usr/local/include'
+        '-I/usr/local/include/',
+        '-I/Users/Shared/Epic Games/UE_4.19/Engine/'
         ]
 
 SOURCE_EXTENSIONS = [
