@@ -3,6 +3,7 @@
         "es_modules": {},
         "node": {},
         "node-express": {},
+        "angular": {},
         "requirejs": {
             "baseURL": "./",
             "paths": {}
@@ -10,6 +11,8 @@
     },
     "libs": [
         "browser",
+        "jquery",
+        "react",
         "ecma5",
         "ecma6"
     ],
