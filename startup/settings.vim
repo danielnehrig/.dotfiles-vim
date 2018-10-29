@@ -95,8 +95,7 @@ let g:gitgutter_sign_modified = '≈ '
 let g:gitgutter_sign_removed = '⌐ '
 
 
-# Syntastic checkers 
 let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_typescript_checkers = ['tsc', 'tslint']
+let g:syntastic_typescript_checkers = ['tslint']
 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
