@@ -98,3 +98,4 @@ let g:gitgutter_sign_modified = '≈ '
 let g:gitgutter_sign_removed = '⌐ '
 let g:syntastic_javascript_checkers = ['eslint']
 
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
