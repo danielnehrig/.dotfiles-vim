@@ -85,17 +85,18 @@ endif
 let NERDTreeMinimalUI = 0
 let NERDTreeDirArrows = 1
 
-let g:phpcomplete_parse_docblock_comments = 1
-
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_color_change_percent = 10
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
 let g:indent_guides_space_guides = 1
 let g:indent_guides_guide_size = 1
-"
 let g:gitgutter_sign_modified = '≈ '
 let g:gitgutter_sign_removed = '⌐ '
+
+
+# Syntastic checkers 
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_typescript_checkers = ['tsc', 'tslint']
 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
