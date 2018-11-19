@@ -95,7 +95,10 @@ let g:gitgutter_sign_modified = '≈ '
 let g:gitgutter_sign_removed = '⌐ '
 
 
+let g:OmniSharp_server_use_mono = 1
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_typescript_checkers = ['tslint']
+let g:syntastic_cs_checkers = ['code_checker']
+let g:OmniSharp_selector_ui = 'ctrlp'  " Use ctrlp.vim
 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
