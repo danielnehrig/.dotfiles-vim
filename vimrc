@@ -9,6 +9,7 @@ python del powerline_setup
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'moll/vim-node'
+Plugin 'omnisharp-vim'
 Plugin 'vim-scripts/SyntaxComplete'
 Plugin 'andreshazard/vim-freemarker' 
 Plugin 'isRuslan/vim-es6'
