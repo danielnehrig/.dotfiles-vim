@@ -1,1 +1,1 @@
-autocmd FileType c# map <F10> :w <CR> :!clear; make Start<CR>
+autocmd FileType cs map <F10> :w <CR> :!clear; make Start<CR>

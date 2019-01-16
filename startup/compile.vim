@@ -9,4 +9,4 @@ autocmd FileType java map <F8> :w <CR> :!clear; javac % && java %< <CR>
 " Build Groovy
 autocmd FileType groovy map <F8> :w <CR> :!clear; groovy % <CR>
 " Build C#
-autocmd FileType c# map <F8> :w <CR> :!clear; make <CR>
+autocmd FileType cs map <F8> :w <CR> :!clear; make <CR>
