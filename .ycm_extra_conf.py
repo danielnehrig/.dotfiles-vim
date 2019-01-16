@@ -19,13 +19,15 @@ BASE_FLAGS = [
         '-I/usr/lib/',
         '-I/usr/include/',
         '-I/usr/local/include/',
-        '-I/Users/Shared/Epic Games/UE_4.19/Engine/'
+        '-I/Users/Shared/Epic Games/UE_4.19/Engine/',
+        '-I./'
         ]
 
 SOURCE_EXTENSIONS = [
         '.cpp',
         '.cxx',
         '.cc',
+        '.cs',
         '.c',
         '.m',
         '.mm'

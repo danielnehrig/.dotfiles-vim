@@ -75,6 +75,10 @@ source ~/.vim/startup/functions.vim
 source ~/.vim/startup/mappings.vim
 source ~/.vim/startup/settings.vim
 
+" Compile and Run settings
+source ~/.vim/startup/compile.vim
+source ~/.vim/startup/run.vim
+
 " Syntax-specific settings
 source ~/.vim/startup/js.vim
 source ~/.vim/startup/php.vim
