@@ -2,9 +2,9 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 
-" python from powerline.vim import setup as powerline_setup
-" python powerline_setup()
-" python del powerline_setup
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
 
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
