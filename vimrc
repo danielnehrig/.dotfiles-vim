@@ -15,6 +15,7 @@ Plugin 'peitalin/vim-jsx-typescript'
 Plugin 'OmniSharp/omnisharp-vim'
 Plugin 'alvan/vim-closetag'
 Plugin 'vim-scripts/SyntaxComplete'
+Plugin 'sickill/vim-pasta'
 Plugin 'andreshazard/vim-freemarker' 
 Plugin 'isRuslan/vim-es6'
 Plugin 'juvenn/mustache.vim'
@@ -120,4 +121,5 @@ set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
 let g:syntastic_javascript_checkers = ['standard']
 "let g:EclimCompletionMethod = 'omnifunc'
 "let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+"
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
