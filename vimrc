@@ -29,6 +29,8 @@ Plugin 'vim-scripts/JavaScript-Indent'
 Plugin 'myhere/vim-nodejs-complete'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'mzlogin/vim-markdown-toc'
 Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Valloric/YouCompleteMe'
@@ -114,11 +116,7 @@ let g:nodejs_complete_config = {
 let g:Powerline_symbols="fancy"
 let g:ycm_show_diagnostics_ui = 0
 
-set tags+=~/.vim/tags/tags
-set tags+=~/.vim/tags/cpp
-set tags+=~/.vim/tags/gl
-set tags+=~/.vim/tags/qt4
-set tags+=./tags
+set tags=./tags;,tags;
 set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
 let g:syntastic_javascript_checkers = ['standard']
 "let g:EclimCompletionMethod = 'omnifunc'
