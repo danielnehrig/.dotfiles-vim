@@ -120,7 +120,7 @@ set tags+=~/.vim/tags/gl
 set tags+=~/.vim/tags/qt4
 set tags+=./tags
 set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
-let g:syntastic_javascript_checkers = ['standard']
+let g:syntastic_javascript_checkers = ['tslint']
 "let g:EclimCompletionMethod = 'omnifunc'
 "let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 "
