@@ -125,3 +125,5 @@ let g:tagbar_type_typescript = {
     \ 'e:enums',
   \ ]
 \ }
+
+au BufNewFile,BufRead *.xaml        setf xml
