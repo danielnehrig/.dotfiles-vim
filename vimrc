@@ -9,6 +9,7 @@ python3 del powerline_setup
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'tasn/vim-tsx'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'aperezdc/vim-template'
 Plugin 'adelarsq/vim-matchit'
