@@ -90,4 +90,12 @@ nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
 
 nmap <Leader>n :NERDTreeToggle<CR>
+nmap <Leader>p :CtrlPBuffer<CR>
 nmap <F9> :TagbarToggle<CR>
+
+let g:UltiSnipsExpandTrigger="<c-s>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"

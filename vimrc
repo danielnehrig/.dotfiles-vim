@@ -2,15 +2,24 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 
-" python from powerline.vim import setup as powerline_setup
-" python powerline_setup()
-" python del powerline_setup
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
 
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'tasn/vim-tsx'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'aperezdc/vim-template'
+Plugin 'adelarsq/vim-matchit'
+Plugin 'sukima/xmledit'
 Plugin 'moll/vim-node'
+Plugin 'peitalin/vim-jsx-typescript'
 Plugin 'OmniSharp/omnisharp-vim'
+Plugin 'alvan/vim-closetag'
 Plugin 'vim-scripts/SyntaxComplete'
+Plugin 'sickill/vim-pasta'
 Plugin 'andreshazard/vim-freemarker' 
 Plugin 'isRuslan/vim-es6'
 Plugin 'juvenn/mustache.vim'
@@ -22,6 +31,8 @@ Plugin 'vim-scripts/JavaScript-Indent'
 Plugin 'myhere/vim-nodejs-complete'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'mzlogin/vim-markdown-toc'
 Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Valloric/YouCompleteMe'
@@ -36,7 +47,8 @@ Plugin 'scrooloose/nerdtree.git'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'MarcWeber/vim-addon-mw-utils.git'
 Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
+" Plugin 'garbas/vim-snipmate'
+Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'hail2u/vim-css3-syntax.git'
 Plugin 'jasmine/jasmine'
@@ -106,13 +118,10 @@ let g:nodejs_complete_config = {
 let g:Powerline_symbols="fancy"
 let g:ycm_show_diagnostics_ui = 0
 
-set tags+=~/.vim/tags/tags
-set tags+=~/.vim/tags/cpp
-set tags+=~/.vim/tags/gl
-set tags+=~/.vim/tags/qt4
-set tags+=./tags
+set tags=./tags;,tags;
 set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
 let g:syntastic_javascript_checkers = ['eslint']
 "let g:EclimCompletionMethod = 'omnifunc'
 "let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+"
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'

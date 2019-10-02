@@ -98,7 +98,32 @@ let g:gitgutter_sign_removed = '⌐ '
 let g:OmniSharp_server_use_mono = 1
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_typescript_checkers = ['tslint']
-let g:syntastic_cs_checkers = ['code_checker']
+let g:syntastic_cs_checkers = ['mcs']
 let g:OmniSharp_selector_ui = 'ctrlp'  " Use ctrlp.vim
 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+let g:tagbar_type_typescript = {
+  \ 'ctagstype': 'typescript',
+  \ 'kinds': [
+    \ 'c:classes',
+    \ 'n:modules',
+    \ 'f:functions',
+    \ 'v:variables',
+    \ 'v:varlambdas',
+    \ 'm:members',
+    \ 'i:interfaces',
+    \ 'e:enums',
+  \ ]
+\ }
+
+au BufNewFile,BufRead *.xaml        setf xml
