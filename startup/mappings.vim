@@ -1,4 +1,3 @@
-" Unmap the arrow keys
 no <down> ddp
 no <left> <Nop>
 no <right> <Nop>
@@ -74,23 +73,11 @@ nmap <Leader>c' '_di'Pa
 
 imap <C-J>s <Plug>snipMateNextOrTrigger
 
-" Build C
-autocmd FileType c map <F8> :w <CR> :!clear; gcc % -o %< && ./%< <CR>
-" Build C and mysql
-autocmd FileType c map <F9> :w <CR> :!clear; gcc -I /usr/local/mysql/include/mysql/ -L /usr/local/mysql/lib/ -lmysqlclient % -o %< && ./%< <CR>
-" Build CPP
-autocmd FileType cpp map <F8> :w <CR> :!clear; g++ % -o %< && ./%< <CR>
-" Build Java
-autocmd FileType java map <F8> :w <CR> :!clear; javac % && java %< <CR>
-" Build Groovy
-autocmd FileType groovy map <F8> :w <CR> :!clear; groovy % <CR>
-autocmd FileType twig imap <leader>a[ [{[  ]}]<ESC>Bhi
-
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
 
 nmap <Leader>n :NERDTreeToggle<CR>
-nmap <Leader>p :CtrlPBuffer<CR>
+nmap <Leader>b :CtrlPBuffer<CR>
 nmap <F9> :TagbarToggle<CR>
 
 let g:UltiSnipsExpandTrigger="<c-s>"

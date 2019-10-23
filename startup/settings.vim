@@ -101,6 +101,8 @@ let g:syntastic_typescript_checkers = ['tslint']
 let g:syntastic_cs_checkers = ['mcs']
 let g:OmniSharp_selector_ui = 'ctrlp'  " Use ctrlp.vim
 
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
+
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " make YCM compatible with UltiSnips (using supertab)
@@ -111,6 +113,8 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+let g:prettier#autoformat = 0
+nmap <Leader>c <Plug>(Prettier)
 
 let g:tagbar_type_typescript = {
   \ 'ctagstype': 'typescript',
@@ -127,3 +131,7 @@ let g:tagbar_type_typescript = {
 \ }
 
 au BufNewFile,BufRead *.xaml        setf xml
+let g:prettier#quickfix_enabled = 0
+
+let g:prettier#autoformat = 0
+autocmd BufWritePre,TextChanged,InsertLeave *.js,*.json,*.css,*.scss,*.less,*.graphql PrettierAsync

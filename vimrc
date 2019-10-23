@@ -9,12 +9,13 @@ python3 del powerline_setup
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'tasn/vim-tsx'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'aperezdc/vim-template'
 Plugin 'adelarsq/vim-matchit'
+Plugin 'prettier/vim-prettier'
 Plugin 'sukima/xmledit'
 Plugin 'moll/vim-node'
+Plugin 'leafgarland/typescript-vim'
 Plugin 'peitalin/vim-jsx-typescript'
 Plugin 'OmniSharp/omnisharp-vim'
 Plugin 'alvan/vim-closetag'
@@ -27,7 +28,7 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'Quramy/tsuquyomi'
 Plugin 'othree/yajs.vim'
 Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'vim-scripts/JavaScript-Indent'
+"Plugin 'vim-scripts/JavaScript-Indent'
 Plugin 'myhere/vim-nodejs-complete'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'godlygeek/tabular'
@@ -38,7 +39,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-surround.git'
 Plugin 'mattn/emmet-vim'
-Plugin 'leafgarland/typescript-vim'
 Plugin 'airblade/vim-gitgutter.git'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'vim-scripts/argtextobj.vim'
@@ -92,7 +92,6 @@ source ~/.vim/startup/compile.vim
 source ~/.vim/startup/run.vim
 
 " Syntax-specific settings
-source ~/.vim/startup/js.vim
 source ~/.vim/startup/php.vim
 source ~/.vim/startup/yaml.vim
 source ~/.vim/startup/html.vim
@@ -121,7 +120,5 @@ let g:ycm_show_diagnostics_ui = 0
 set tags=./tags;,tags;
 set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
 let g:syntastic_javascript_checkers = ['tslint']
-"let g:EclimCompletionMethod = 'omnifunc'
-"let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-"
+
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
