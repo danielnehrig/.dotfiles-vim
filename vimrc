@@ -8,6 +8,8 @@ python3 del powerline_setup
 
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'zoubin/vim-gotofile'
+Plugin 'gorkunov/smartgf.vim.git'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'aperezdc/vim-template'
