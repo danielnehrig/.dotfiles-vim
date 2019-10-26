@@ -8,6 +8,7 @@ python3 del powerline_setup
 
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'junegunn/fzf.vim'
 Plugin 'zoubin/vim-gotofile'
 Plugin 'gorkunov/smartgf.vim.git'
 Plugin 'jiangmiao/auto-pairs'
@@ -36,7 +37,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'mzlogin/vim-markdown-toc'
-Plugin 'rking/ag.vim'
+"Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-surround.git'
@@ -126,3 +127,4 @@ let g:syntastic_ts_checkers = ['tslint']
 
 let g:syntastic_javascript_checkers = ['eslint']
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+set rtp+=/usr/local/opt/fzf
