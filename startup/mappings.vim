@@ -77,7 +77,8 @@ nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
 
 nmap <Leader>n :NERDTreeToggle<CR>
-nmap <Leader>b :CtrlPBuffer<CR>
+nmap <Leader>b :Buffers<CR>
+nmap <C-p> :Files<CR>
 nmap <F9> :TagbarToggle<CR>
 
 let g:UltiSnipsExpandTrigger="<c-s>"
