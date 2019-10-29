@@ -66,7 +66,7 @@ Plugin 'justinmk/vim-syntax-extra'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'tpope/vim-haml'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'ternjs/tern_for_vim'
+" Plugin 'ternjs/tern_for_vim'
 Plugin 'jamescarr/snipmate-nodejs'
 call vundle#end()
 
