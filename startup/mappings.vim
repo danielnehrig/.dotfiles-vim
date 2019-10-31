@@ -80,6 +80,8 @@ nmap <Leader>n :NERDTreeToggle<CR>
 nmap <Leader>b :Buffers<CR>
 nmap <C-p> :Files<CR>
 nmap <F9> :TagbarToggle<CR>
+nmap <C-]> :YcmCompleter GoTo<CR>
+nmap <Leader>c <Plug>(Prettier)
 
 let g:UltiSnipsExpandTrigger="<c-s>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"

@@ -113,8 +113,6 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-let g:prettier#autoformat = 0
-nmap <Leader>c <Plug>(Prettier)
 
 let g:tagbar_type_typescript = {
   \ 'ctagstype': 'typescript',
@@ -131,10 +129,24 @@ let g:tagbar_type_typescript = {
 \ }
 
 au BufNewFile,BufRead *.xaml        setf xml
-let g:prettier#quickfix_enabled = 0
 
 let g:prettier#autoformat = 0
-autocmd BufWritePre,TextChanged,InsertLeave *.js,*.json,*.css,*.scss,*.less,*.graphql PrettierAsync
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
+
+let g:ale_linters = {
+      \   'javascript': ['eslint'],
+      \   'typescript': ['tsserver', 'tslint'],
+      \   'vue': ['eslint']
+      \}
+
+let g:ale_fixers = {
+      \    'javascript': ['eslint'],
+      \    'typescript': ['prettier'],
+      \    'vue': ['eslint'],
+      \    'scss': ['prettier'],
+      \    'html': ['prettier']
+      \}
+let g:ale_fix_on_save = 1
 
 " Command for git grep
 " - fzf#vim#grep(command, with_column, [options], [fullscreen])
