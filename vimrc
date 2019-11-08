@@ -23,7 +23,7 @@ Plugin 'moll/vim-node'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'peitalin/vim-jsx-typescript'
 Plugin 'OmniSharp/omnisharp-vim'
-Plugin 'alvan/vim-closetag'
+" Plugin 'alvan/vim-closetag'
 " Plugin 'vim-scripts/SyntaxComplete'
 Plugin 'sickill/vim-pasta'
 Plugin 'andreshazard/vim-freemarker' 
@@ -105,17 +105,20 @@ set signcolumn=yes
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
 
+let g:ycm_auto_trigger = 1
 let g:ycm_semantic_triggers = {
     \   'css': [ 're!^\s{2}', 're!:\s+' ],
     \   'scss': [ 're!\s{2}', 're!:\s+' ],
+    \   'javascript': [ '.', ':', '/', "'", '"', 'from', "re!import .* from '"],
     \   'sass': [ 're!\s{2}', 're!:\s+' ],
-    \   'js': [ 're!.', 're!=\s+' ],
     \ }
+
 
 let g:nodejs_complete_config = {
             \  'js_compl_fn': 'jscomplete#CompleteJS',
             \  'max_node_compl_len': 15
             \}
+
 " Time out on key codes but not mappings.
 " Basically this makes terminal Vim work sanely.
 let g:Powerline_symbols="fancy"
@@ -123,9 +126,9 @@ let g:ycm_show_diagnostics_ui = 0
 
 set tags=./tags;,tags;
 set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
-let g:syntastic_typescript_checkers = ['tslint']
-let g:syntastic_ts_checkers = ['tslint']
-
-let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_typescript_checkers = ['tslint']
+" let g:syntastic_ts_checkers = ['tslint']
+" let g:syntastic_javascript_checkers = ['eslint']
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:templates_directory = ['~/.vim/templates']
 set rtp+=/usr/local/opt/fzf
