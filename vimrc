@@ -71,18 +71,12 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'jamescarr/snipmate-nodejs'
 call vundle#end()
 
-"============== Custom scripts ===============
-source ~/.vim/after/syntaxcheck.vim
-
-
 "============== Filetype stuff ===============
 filetype plugin on
 filetype indent on
 syntax enable
 
 "============== Script configs ===============
-let NERDTreeMinimalUI=1
-let NERDTreeDirArrows=1
 
 " Load custom settings
 source ~/.vim/startup/color.vim

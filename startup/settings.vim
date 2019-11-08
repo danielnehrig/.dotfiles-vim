@@ -114,6 +114,10 @@ let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
+" let g:syntastic_typescript_checkers = ['tslint']
+" let g:syntastic_ts_checkers = ['tslint']
+" let g:syntastic_javascript_checkers = ['eslint']
+
 let g:tagbar_type_typescript = {
   \ 'ctagstype': 'typescript',
   \ 'kinds': [
