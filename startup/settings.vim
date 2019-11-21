@@ -136,10 +136,12 @@ au BufNewFile,BufRead *.xaml        setf xml
 
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
+autocmd FileType cs let g:ale_c_uncrustify_options = '-l CS'
 
 let g:ale_linters = {
       \   'javascript': ['eslint'],
       \   'typescript': ['tsserver', 'tslint'],
+      \   'cs': ['csc'],
       \   'vue': ['eslint']
       \}
 
@@ -147,6 +149,7 @@ let g:ale_fixers = {
       \    'javascript': ['eslint'],
       \    'typescript': ['prettier'],
       \    'vue': ['eslint'],
+      \    'cs': ['uncrustify'],
       \    'scss': ['prettier'],
       \    'html': ['prettier']
       \}
