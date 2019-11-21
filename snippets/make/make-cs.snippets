@@ -1,0 +1,25 @@
+snippet csbuild
+	COMPILER=csc
+	FRAMEWORK=
+	SRC=./src/
+	DIST=./dist/
+	PROGRAMNAME=${0}
+
+	all: clean build start
+
+	watch:
+		nodemon --exec make all -e cs
+
+	start:
+		mono $(DIST)$(PROGRAMNAME)
+
+	build:
+		$(COMPILER) $(SRC)**/*.cs /out:$(DIST)$(PROGRAMNAME)
+
+	clean:
+		rm -rf $(DIST)*
+
+	test:
+
+	lint:
+		uncrustify -l CS ./.uncrustify $(SRC)**/*.cs
