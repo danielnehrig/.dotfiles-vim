@@ -124,6 +124,7 @@ set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
 " let g:syntastic_ts_checkers = ['tslint']
 " let g:syntastic_javascript_checkers = ['eslint']
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_log_level='debug'
 let g:templates_directory = ['~/.vim/templates']
 let g:ale_cs_csc_assembly_path = ['/Users/dnehrig/.nuget/packages/',
       \ '/usr/local/share/dotnet/sdk/NuGetFallbackFolder/']
