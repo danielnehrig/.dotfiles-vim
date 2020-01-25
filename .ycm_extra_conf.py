@@ -49,9 +49,17 @@ HEADER_DIRECTORIES = [
         'include'
         ]
 
+
+def Settings(**kwargs):
+    return {
+            'interpreter_path': '/usr/local/bin/python'
+    }
+
+
 def IsHeaderFile(filename):
     extension = os.path.splitext(filename)[1]
     return extension in HEADER_EXTENSIONS
+
 
 def GetCompilationInfoForFile(database, filename):
     if IsHeaderFile(filename):
@@ -74,6 +82,7 @@ def GetCompilationInfoForFile(database, filename):
         return None
     return database.GetCompilationInfoForFile(filename)
 
+
 def FindNearest(path, target, build_folder):
     candidate = os.path.join(path, target)
     if(os.path.isfile(candidate) or os.path.isdir(candidate)):
@@ -91,6 +100,7 @@ def FindNearest(path, target, build_folder):
             return candidate;
 
     return FindNearest(parent, target, build_folder)
+
 
 def MakeRelativePathsInFlagsAbsolute(flags, working_directory):
     if not working_directory:
@@ -112,7 +122,7 @@ def MakeRelativePathsInFlagsAbsolute(flags, working_directory):
                 break
 
             if flag.startswith(path_flag):
-                path = flag[ len(path_flag): ]
+                path = flag[len(path_flag):]
                 new_flag = path_flag + os.path.join(working_directory, path)
                 break
 
