@@ -41,6 +41,7 @@ Plugin 'mzlogin/vim-markdown-toc'
 "Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'neoclide/coc.nvim'
 Plugin 'tpope/vim-surround.git'
 Plugin 'mattn/emmet-vim'
 Plugin 'airblade/vim-gitgutter.git'
@@ -93,6 +94,7 @@ source ~/.vim/startup/run.vim
 source ~/.vim/startup/php.vim
 source ~/.vim/startup/yaml.vim
 source ~/.vim/startup/html.vim
+source ~/.vim/startup/coc.vim
 
 
 set signcolumn=yes
@@ -106,6 +108,11 @@ let g:ycm_semantic_triggers = {
     \   'javascript': [ '.', ':', '/', "'", '"', 'from', "re!import .* from '"],
     \   'sass': [ 're!\s{2}', 're!:\s+' ],
     \ }
+
+let g:ycm_filetype_blacklist = { 'yaml': 1, 'lua': 1, 'json': 1, 'vim': 1  }
+autocmd BufNew,BufEnter * execute "silent! CocDisable"
+autocmd BufNew,BufEnter *.yaml,*.json,*.yaml,*.lua execute "silent! CocEnable"
+autocmd BufLeave *.yaml,*.json,*.vim,*.lua execute "silent! CocDisable"
 
 
 let g:nodejs_complete_config = {
