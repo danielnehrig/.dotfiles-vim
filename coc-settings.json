@@ -1,7 +1,8 @@
 {
   "yaml.schemas": {
     "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/schemas/v3.0/schema.json": "/v1.yaml",
-    "kubernetes": ["/deployment.yaml","/namespace.yaml","/service.yaml"],
-    "http://json.schemastore.org/kustomization": "/kustomization.yaml"
+    "kubernetes": ["/deployment.yaml", "/namespace.yaml", "/service.yaml"],
+    "http://json.schemastore.org/kustomization": "/kustomization.yaml",
+    "https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/circleciconfig.json": "/config.yml"
   }
 }

@@ -109,10 +109,10 @@ let g:ycm_semantic_triggers = {
     \   'sass': [ 're!\s{2}', 're!:\s+' ],
     \ }
 
-let g:ycm_filetype_blacklist = { 'yaml': 1, 'lua': 1, 'json': 1, 'vim': 1  }
+let g:ycm_filetype_blacklist = { 'yaml': 1, 'yml': 1, 'lua': 1, 'json': 1, 'vim': 1  }
 autocmd BufNew,BufEnter * execute "silent! CocDisable"
-autocmd BufNew,BufEnter *.yaml,*.json,*.yaml,*.lua execute "silent! CocEnable"
-autocmd BufLeave *.yaml,*.json,*.vim,*.lua execute "silent! CocDisable"
+autocmd BufNew,BufEnter *.yaml,*.json,*.yaml,*.yml,*.lua execute "silent! CocEnable"
+autocmd BufLeave *.yaml,*.yml,*.json,*.vim,*.lua execute "silent! CocDisable"
 
 
 let g:nodejs_complete_config = {
