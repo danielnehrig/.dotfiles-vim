@@ -9,6 +9,7 @@ python3 del powerline_setup
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'mrk21/yaml-vim'
+Plugin 'tmux-plugins/vim-tmux'
 Plugin 'xavierchow/vim-swagger-preview'
 Plugin 'dense-analysis/ale'
 Plugin 'nathanaelkane/vim-indent-guides'

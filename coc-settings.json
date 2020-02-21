@@ -3,6 +3,7 @@
     "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/schemas/v3.0/schema.json": "/v1.yaml",
     "kubernetes": ["/deployment.yaml", "/namespace.yaml", "/service.yaml"],
     "http://json.schemastore.org/kustomization": "/kustomization.yaml",
-    "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/circleciconfig.json": "/config.yml"
+    "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/circleciconfig.json": "/config.yml",
+    "https://raw.githubusercontent.com/travis-ci/travis-yml/master/schema.json": "/.travis.yml"
   }
 }
