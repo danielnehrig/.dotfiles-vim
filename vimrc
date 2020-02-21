@@ -109,10 +109,10 @@ let g:ycm_semantic_triggers = {
     \   'sass': [ 're!\s{2}', 're!:\s+' ],
     \ }
 
-let g:ycm_filetype_blacklist = { 'yaml': 1, 'yml': 1, 'lua': 1, 'json': 1, 'vim': 1  }
+let g:ycm_filetype_blacklist = { 'yaml': 1, 'yml': 1, 'lua': 1, 'json': 1, 'vim': 1, 'java': 1, 'groovy': 1  }
 autocmd BufNew,BufEnter * execute "silent! CocDisable"
-autocmd BufNew,BufEnter *.yaml,*.json,*.yaml,*.yml,*.lua execute "silent! CocEnable"
-autocmd BufLeave *.yaml,*.yml,*.json,*.vim,*.lua execute "silent! CocDisable"
+autocmd BufNew,BufEnter *.yaml,*.json,*.yaml,*.yml,*.lua,*.java,*.groovy execute "silent! CocEnable"
+autocmd BufLeave *.yaml,*.yml,*.json,*.vim,*.lua,*.java,*.groovy execute "silent! CocDisable"
 
 
 let g:nodejs_complete_config = {
@@ -131,7 +131,7 @@ set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
 " let g:syntastic_ts_checkers = ['tslint']
 " let g:syntastic_javascript_checkers = ['eslint']
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-let g:ycm_log_level='debug'
+" let g:ycm_log_level='debug'
 let g:templates_directory = ['~/.vim/templates']
 let g:ale_cs_csc_assembly_path = ['/Users/dnehrig/.nuget/packages/',
       \ '/usr/local/share/dotnet/sdk/NuGetFallbackFolder/']
