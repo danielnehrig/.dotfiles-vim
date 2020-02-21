@@ -1,3 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/Users/dnehrig/code/c/bif12c'
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/Users/dnehrig/code/work/fock/app/server/controllers/spapoc'
+let g:netrw_dirhist_4='/Users/dnehrig/code/work/fock/app/server/controllers'
+let g:netrw_dirhist_3='/Users/dnehrig/code/work/fock/app/server/controllers/login'
+let g:netrw_dirhist_2='/Users/dnehrig/code/work/fock/app/server/controllers'
+let g:netrw_dirhist_1='/Users/dnehrig/code/work/fock/app/server/controllers/login'
+let g:netrw_dirhist_0='/Users/dnehrig/code/work/fock/app/server/controllers'
+let g:netrw_dirhist_9='/Users/dnehrig/code/work/fock/app/server'
+let g:netrw_dirhist_8='/Users/dnehrig/code/work/fock/app'
+let g:netrw_dirhist_7='/Users/dnehrig/code/work/fock'
+let g:netrw_dirhist_6='/Users/dnehrig/code/work/fock/app/server/controllers'
