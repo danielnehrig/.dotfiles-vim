@@ -8,7 +8,10 @@ python3 del powerline_setup
 
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'mrk21/yaml-vim'
+Plugin 'xavierchow/vim-swagger-preview'
 Plugin 'dense-analysis/ale'
+Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-repeat'
 Plugin 'zoubin/vim-gotofile'
@@ -57,7 +60,6 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'hail2u/vim-css3-syntax.git'
 Plugin 'jasmine/jasmine'
-Plugin 'nathanaelkane/vim-indent-guides.git'
 Plugin 'majutsushi/tagbar'
 Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
