@@ -94,9 +94,11 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
 let g:indent_guides_space_guides = 1
 let g:indent_guides_guide_size = 1
-let g:gitgutter_sign_modified = '≈ '
-let g:gitgutter_sign_removed = '⌐ '
-
+let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
+let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
+let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
+let g:gitgutter_sign_modified_removed = emoji#for('collision')
+set completefunc=emoji#complete
 
 let g:OmniSharp_server_use_mono = 1
 let g:syntastic_javascript_checkers = ['eslint']
@@ -197,3 +199,42 @@ command! -bang -nargs=* Rg
 " Likewise, Files command with preview window
 command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+
+set signcolumn=yes
+let g:gitgutter_realtime = 0
+let g:gitgutter_eager = 0
+
+let g:ycm_auto_trigger = 1
+let g:ycm_semantic_triggers = {
+    \   'css': [ 're!^\s{2}', 're!:\s+' ],
+    \   'scss': [ 're!\s{2}', 're!:\s+' ],
+    \   'javascript': [ '.', ':', '/', "'", '"', 'from', "re!import .* from '"],
+    \   'sass': [ 're!\s{2}', 're!:\s+' ],
+    \ }
+
+let g:ycm_filetype_blacklist = { 'yaml': 1, 'yml': 1, 'lua': 1, 'json': 1, 'vim': 1, 'java': 1, 'groovy': 1  }
+autocmd BufNew,BufEnter * execute "silent! CocDisable"
+autocmd BufNew,BufEnter *.yaml,*.json,*.yaml,*.yml,*.lua,*.java,*.groovy execute "silent! CocEnable"
+autocmd BufLeave *.yaml,*.yml,*.json,*.vim,*.lua,*.java,*.groovy execute "silent! CocDisable"
+
+
+let g:nodejs_complete_config = {
+            \  'js_compl_fn': 'jscomplete#CompleteJS',
+            \  'max_node_compl_len': 15
+            \}
+
+" Time out on key codes but not mappings.
+" Basically this makes terminal Vim work sanely.
+let g:Powerline_symbols="fancy"
+let g:ycm_show_diagnostics_ui = 0
+
+set tags=./tags;,tags;
+set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
+" let g:syntastic_typescript_checkers = ['tslint']
+" let g:syntastic_ts_checkers = ['tslint']
+" let g:syntastic_javascript_checkers = ['eslint']
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+" let g:ycm_log_level='debug'
+let g:templates_directory = ['~/.vim/templates']
+let g:ale_cs_csc_assembly_path = ['/Users/dnehrig/.nuget/packages/',
+      \ '/usr/local/share/dotnet/sdk/NuGetFallbackFolder/']

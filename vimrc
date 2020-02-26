@@ -1,12 +1,21 @@
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=/usr/local/opt/fzf
 
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
 python3 del powerline_setup
 
 call vundle#begin()
+Plugin 'iamcco/markdown-preview.nvim'
+Plugin 'junegunn/vim-peekaboo'
+Plugin 'junegunn/vim-slash'
+Plugin 'junegunn/vim-emoji'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'rainglow/vim'
+Plugin 'junegunn/goyo.vim'
+Plugin 'junegunn/limelight.vim'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'mrk21/yaml-vim'
 Plugin 'tmux-plugins/vim-tmux'
@@ -28,7 +37,6 @@ Plugin 'benmills/vimux'
 Plugin 'tyewang/vimux-jest-test'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'peitalin/vim-jsx-typescript'
-" Plugin 'OmniSharp/omnisharp-vim'
 " Plugin 'alvan/vim-closetag'
 " Plugin 'vim-scripts/SyntaxComplete'
 Plugin 'sickill/vim-pasta'
@@ -44,7 +52,6 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'mzlogin/vim-markdown-toc'
-"Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'neoclide/coc.nvim'
@@ -67,13 +74,11 @@ Plugin 'majutsushi/tagbar'
 Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 Plugin 'mtscout6/vim-tagbar-css'
-" Plugin 'kien/ctrlp.vim'
 Plugin 'vim-scripts/a.vim'
 Plugin 'justinmk/vim-syntax-extra'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'tpope/vim-haml'
 Plugin 'terryma/vim-multiple-cursors'
-" Plugin 'ternjs/tern_for_vim'
 Plugin 'jamescarr/snipmate-nodejs'
 call vundle#end()
 
@@ -100,45 +105,3 @@ source ~/.vim/startup/php.vim
 source ~/.vim/startup/yaml.vim
 source ~/.vim/startup/html.vim
 source ~/.vim/startup/coc.vim
-
-
-set signcolumn=yes
-let g:gitgutter_realtime = 0
-let g:gitgutter_eager = 0
-
-let g:ycm_auto_trigger = 1
-let g:ycm_semantic_triggers = {
-    \   'css': [ 're!^\s{2}', 're!:\s+' ],
-    \   'scss': [ 're!\s{2}', 're!:\s+' ],
-    \   'javascript': [ '.', ':', '/', "'", '"', 'from', "re!import .* from '"],
-    \   'sass': [ 're!\s{2}', 're!:\s+' ],
-    \ }
-
-let g:ycm_filetype_blacklist = { 'yaml': 1, 'yml': 1, 'lua': 1, 'json': 1, 'vim': 1, 'java': 1, 'groovy': 1  }
-autocmd BufNew,BufEnter * execute "silent! CocDisable"
-autocmd BufNew,BufEnter *.yaml,*.json,*.yaml,*.yml,*.lua,*.java,*.groovy execute "silent! CocEnable"
-autocmd BufLeave *.yaml,*.yml,*.json,*.vim,*.lua,*.java,*.groovy execute "silent! CocDisable"
-
-
-let g:nodejs_complete_config = {
-            \  'js_compl_fn': 'jscomplete#CompleteJS',
-            \  'max_node_compl_len': 15
-            \}
-
-" Time out on key codes but not mappings.
-" Basically this makes terminal Vim work sanely.
-let g:Powerline_symbols="fancy"
-let g:ycm_show_diagnostics_ui = 0
-
-set tags=./tags;,tags;
-set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
-" let g:syntastic_typescript_checkers = ['tslint']
-" let g:syntastic_ts_checkers = ['tslint']
-" let g:syntastic_javascript_checkers = ['eslint']
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-" let g:ycm_log_level='debug'
-let g:templates_directory = ['~/.vim/templates']
-let g:ale_cs_csc_assembly_path = ['/Users/dnehrig/.nuget/packages/',
-      \ '/usr/local/share/dotnet/sdk/NuGetFallbackFolder/']
-
-set rtp+=/usr/local/opt/fzf
