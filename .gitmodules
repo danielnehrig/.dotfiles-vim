@@ -1,57 +1,6 @@
-[submodule "bundle/vim-fugitive"]
-	path = bundle/vim-fugitive
-	url = http://github.com/tpope/vim-fugitive.git
-[submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
-[submodule "bundle/jasmine"]
-	path = bundle/jasmine
-	url = https://github.com/jasmine/jasmine
-[submodule "bundle/vim-surround"]
-	path = bundle/vim-surround
-	url = git://github.com/tpope/vim-surround.git
-[submodule "bundle/vim-easymotion"]
-	path = bundle/vim-easymotion
-	url = https://github.com/easymotion/vim-easymotion
-[submodule "bundle/vim-angular"]
-	path = bundle/vim-angular
-	url = git://github.com/burnettk/vim-angular.git
-[submodule "bundle/javascript-libraries-syntax.vim"]
-	path = bundle/javascript-libraries-syntax.vim
-	url = git://github.com/othree/javascript-libraries-syntax.vim.git
-[submodule "bundle/syntastic"]
-	path = bundle/syntastic
-	url = https://github.com/scrooloose/syntastic
-[submodule "bundle/git-gutter"]
-	path = bundle/git-gutter
-	url = git://github.com/airblade/vim-gitgutter.git
-[submodule "bundle/vim-javascript"]
-	path = bundle/vim-javascript
-	url = https://github.com/pangloss/vim-javascript.git
-[submodule "bundle/vim-javascript-syntax"]
-	path = bundle/vim-javascript-syntax
-	url = https://github.com/jelera/vim-javascript-syntax.git
-[submodule "bundle/vim-indent-guides"]
-	path = bundle/vim-indent-guides
-	url = git://github.com/nathanaelkane/vim-indent-guides.git
-[submodule "bundle/vim-colors-solarized"]
-	path = bundle/vim-colors-solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
-[submodule "bundle/vim-emmet"]
-	path = bundle/vim-emmet
-	url = https://github.com/mattn/emmet-vim
-[submodule "bundle/vim-css3-syntax"]
-	path = bundle/vim-css3-syntax
-	url = https://github.com/hail2u/vim-css3-syntax.git
-[submodule "bundle/vim-haml"]
-	path = bundle/vim-haml
-	url = https://github.com/tpope/vim-haml
-[submodule "bundle/coloresque"]
-	path = bundle/coloresque
-	url = https://github.com/gorodinskiy/vim-coloresque.git
-[submodule "bundle/nerdtree-git"]
-	path = bundle/nerdtree-git
-	url = https://github.com/Xuyuanp/nerdtree-git-plugin
-[submodule "bundle/vim-neocomplete"]
-	path = bundle/vim-neocomplete
-	url = https://github.com/Shougo/neocomplete.vim
+[submodule "bundle/Vundle.vim"]
+	path = bundle/Vundle.vim
+	url = https://github.com/VundleVim/Vundle.vim
+[submodule "bundle/YouCompleteMe"]
+  path = bundle/YouCompleteMe
+  url = https://github.com/Valloric/YouCompleteMe

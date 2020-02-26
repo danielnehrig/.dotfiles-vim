@@ -1,0 +1,31 @@
+# imports
+
+snippet ipm
+	import { ${1} } from 'shared/propsMocks'
+
+# controller
+snippet crp
+	router.post('/', async (ctx, next) => {
+		const {
+			state: {
+				api,
+				coreShopEnvironment,
+				shopConfig,
+				shopConfig: {
+					pageInfo: { htmlClasses }
+				}
+			},
+			request: { body }
+		} = ctx
+
+		try {
+			// Do Api call
+		} catch (e) {
+		}
+
+		ctx.render('${1:pagename}', {
+		})
+		return next()
+	})
+
+# components

@@ -1,4 +1,3 @@
-" Unmap the arrow keys
 no <down> ddp
 no <left> <Nop>
 no <right> <Nop>
@@ -74,9 +73,28 @@ nmap <Leader>c' '_di'Pa
 
 imap <C-J>s <Plug>snipMateNextOrTrigger
 
-" Build C
-map <F8> :w <CR> :!clear; gcc % -o %< && ./%< <CR>
-autocmd FileType twig imap <leader>a[ [{[  ]}]<ESC>Bhi
-
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
+
+nmap <Leader>n :NERDTreeToggle<CR>
+nmap <Leader>b :Buffers<CR>
+nmap <C-p> :Files<CR>
+nmap <F9> :TagbarToggle<CR>
+nmap <C-]> :YcmCompleter GoTo<CR>
+nmap <Leader>c <Plug>(Prettier)
+
+let g:UltiSnipsExpandTrigger="<c-s>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+nmap <Leader>l <Plug>(Limelight)
+xmap <Leader>l <Plug>(Limelight)
