@@ -104,4 +104,4 @@ source ~/.vim/startup/run.vim
 source ~/.vim/startup/php.vim
 source ~/.vim/startup/yaml.vim
 source ~/.vim/startup/html.vim
-source ~/.vim/startup/coc.vim
+" source ~/.vim/startup/coc.vim

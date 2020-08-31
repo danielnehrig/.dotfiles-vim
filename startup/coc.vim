@@ -132,3 +132,16 @@ nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
 nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
 " Search workspace symbols.
 nnoremap <silent> <space>s  :<C-u>CocList -I symbols<
+
+"let lua_lsp = glob('~/.vscode/extensions/sumneko.lua*', 0, 1)
+"if len(lua_lsp)
+    "let lua_lsp = lua_lsp[-1] . '\server'
+    "call coc#config('languageserver', {
+        "\ 'lua-language-server': {
+        "\     'cwd': lua_lsp,
+        "\     'command': lua_lsp . '/bin/macOS/lua-language-server',
+        "\     'args': ['-E', '-e', 'LANG="en_US"', lua_lsp . '/main.lua'],
+        "\     'filetypes': ['lua'],
+        "\ }
+    "\ })
+"endif
