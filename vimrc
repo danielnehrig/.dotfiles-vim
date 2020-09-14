@@ -11,6 +11,7 @@ call vundle#begin()
 Plugin 'iamcco/markdown-preview.nvim'
 Plugin 'junegunn/vim-peekaboo'
 Plugin 'junegunn/vim-slash'
+Plugin 'arcticicestudio/nord-vim'
 Plugin 'junegunn/vim-emoji'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'rainglow/vim'
@@ -25,7 +26,6 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-repeat'
 Plugin 'zoubin/vim-gotofile'
-Plugin 'gorkunov/smartgf.vim.git'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'aperezdc/vim-template'
@@ -65,13 +65,11 @@ Plugin 'scrooloose/nerdtree.git'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'MarcWeber/vim-addon-mw-utils.git'
 Plugin 'tomtom/tlib_vim'
-" Plugin 'garbas/vim-snipmate'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'hail2u/vim-css3-syntax.git'
 Plugin 'jasmine/jasmine'
 Plugin 'majutsushi/tagbar'
-Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 Plugin 'mtscout6/vim-tagbar-css'
 Plugin 'vim-scripts/a.vim'
@@ -89,7 +87,7 @@ syntax enable
 
 "============== Script configs ===============
 
-" Load custom settings
+  " Load custom settings
 source ~/.vim/startup/color.vim
 source ~/.vim/startup/commands.vim
 source ~/.vim/startup/functions.vim
@@ -101,7 +99,3 @@ source ~/.vim/startup/compile.vim
 source ~/.vim/startup/run.vim
 
 " Syntax-specific settings
-source ~/.vim/startup/php.vim
-source ~/.vim/startup/yaml.vim
-source ~/.vim/startup/html.vim
-" source ~/.vim/startup/coc.vim
