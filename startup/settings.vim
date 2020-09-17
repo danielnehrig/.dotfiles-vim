@@ -139,7 +139,7 @@ let g:tagbar_type_typescript = {
 au BufNewFile,BufRead *.xaml        setf xml
 
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
+" autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
 autocmd FileType cs let g:ale_c_uncrustify_options = '-l CS'
 
 let g:ale_linters = {
