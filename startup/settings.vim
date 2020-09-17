@@ -32,9 +32,6 @@ set number
 set nocompatible
 set complete=.,w,b,u,t,i,kspell
 
-" Hack to make sql in php hilighting suck less
-let sql_type_default = 'sqlanywhere'
-
 set enc=utf-8
 set fillchars=vert:¦
 
@@ -51,7 +48,6 @@ set history=1000
 set laststatus=2
 set mouse=a
 set vb
-set ttym=xterm2
 set ffs=unix,dos
 set ff=unix
 
@@ -94,10 +90,6 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
 let g:indent_guides_space_guides = 1
 let g:indent_guides_guide_size = 1
-let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
-let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
-let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
-let g:gitgutter_sign_modified_removed = emoji#for('collision')
 
 let g:OmniSharp_server_use_mono = 1
 let g:syntastic_javascript_checkers = ['eslint']
@@ -117,10 +109,6 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-
-" let g:syntastic_typescript_checkers = ['tslint']
-" let g:syntastic_ts_checkers = ['tslint']
-" let g:syntastic_javascript_checkers = ['eslint']
 
 let g:tagbar_type_typescript = {
   \ 'ctagstype': 'typescript',
@@ -225,10 +213,10 @@ let g:nodejs_complete_config = {
 " Time out on key codes but not mappings.
 " Basically this makes terminal Vim work sanely.
 let g:Powerline_symbols="fancy"
-let g:ycm_show_diagnostics_ui = 0
+" let g:ycm_show_diagnostics_ui = 0
 
-set tags=./tags;,tags;
-set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
+" set tags=./tags;,tags;
+" set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
 " let g:syntastic_typescript_checkers = ['tslint']
 " let g:syntastic_ts_checkers = ['tslint']
 " let g:syntastic_javascript_checkers = ['eslint']
