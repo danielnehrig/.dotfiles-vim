@@ -214,6 +214,7 @@ let g:nodejs_complete_config = {
 " Basically this makes terminal Vim work sanely.
 let g:Powerline_symbols="fancy"
 " let g:ycm_show_diagnostics_ui = 0
+let g:fzf_session_path = $HOME . '/.dotfiles-darwin/.dotfiles-vim/session'
 
 " set tags=./tags;,tags;
 " set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
