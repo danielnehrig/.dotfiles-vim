@@ -52,7 +52,7 @@ HEADER_DIRECTORIES = [
 
 def Settings(**kwargs):
     return {
-            'interpreter_path': '/usr/local/bin/python'
+            'interpreter_path': '/usr/bin/python'
     }
 
 

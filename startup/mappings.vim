@@ -98,3 +98,8 @@ nmap ga <Plug>(EasyAlign)
 
 nmap <Leader>l <Plug>(Limelight)
 xmap <Leader>l <Plug>(Limelight)
+" `SPC l s` - save current session
+nnoremap <leader>ls :SSave<CR>
+"
+" " `SPC l l` - list sessions / switch to different project
+nnoremap <leader>ll :SClose<CR>"

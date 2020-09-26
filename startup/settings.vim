@@ -225,3 +225,32 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:templates_directory = ['~/.vim/templates']
 let g:ale_cs_csc_assembly_path = ['/Users/dnehrig/.nuget/packages/',
       \ '/usr/local/share/dotnet/sdk/NuGetFallbackFolder/']
+
+let g:startify_session_persistence = 1
+let g:startify_lists = [
+      \ { 'type': 'dir',       'header': ['   Recent files']  },
+      \ { 'type': 'sessions',  'header': ['   Saved sessions']  },
+      \ ]
+
+let g:startify_custom_header = [
+      \ "  ",
+      \ '                  .o+`                   ',
+      \ '                 `ooo/                   ',
+      \ '                `+oooo:                  ',
+      \ '               `+oooooo:                 ',
+      \ '               -+oooooo+:                ',
+      \ '             `/:-:++oooo+:               ',
+      \ '            `/++++/+++++++:              ',
+      \ '           `/++++++++++++++:             ',
+      \ '          `/+++moooooooooooo`            ',
+      \ '          mooosssso++osssssso`           ',
+      \ '        .oossssso-````/ossssss+`         ',
+      \ '       -osssssso.      :ssssssso.        ',
+      \ '      :osssssss/        osssso+++.       ',
+      \ '     /ossssssss/        +ssssooo/-       ',
+      \ '   `/ossssso+/:-        -:/+osssso+-     ',
+      \ '  `+sso+:-`                 `.-/+oso:    ',
+      \ ' `++:.                           `-/+/   ',
+      \ ' .`                                 `/   ',
+      \ '   ',
+      \ ]
