@@ -1,4 +1,10 @@
 {
+  "languageserver": {
+    "lua": {
+      "command": "~/.vscode/extensions/sumneko.lua-0.15.6/server/bin/macOS/lua-language-server",
+      "filetypes": ["lua"]
+    }
+  },
   "yaml.schemas": {
     "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/schemas/v3.0/schema.json": "/v1.yaml",
     "kubernetes": ["/deployment.yaml", "/namespace.yaml", "/service.yaml"],

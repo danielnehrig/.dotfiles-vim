@@ -32,9 +32,6 @@ set number
 set nocompatible
 set complete=.,w,b,u,t,i,kspell
 
-" Hack to make sql in php hilighting suck less
-let sql_type_default = 'sqlanywhere'
-
 set enc=utf-8
 set fillchars=vert:¦
 
@@ -51,7 +48,6 @@ set history=1000
 set laststatus=2
 set mouse=a
 set vb
-set ttym=xterm2
 set ffs=unix,dos
 set ff=unix
 
@@ -94,11 +90,6 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
 let g:indent_guides_space_guides = 1
 let g:indent_guides_guide_size = 1
-let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
-let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
-let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
-let g:gitgutter_sign_modified_removed = emoji#for('collision')
-set completefunc=emoji#complete
 
 let g:OmniSharp_server_use_mono = 1
 let g:syntastic_javascript_checkers = ['eslint']
@@ -119,10 +110,6 @@ let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
-" let g:syntastic_typescript_checkers = ['tslint']
-" let g:syntastic_ts_checkers = ['tslint']
-" let g:syntastic_javascript_checkers = ['eslint']
-
 let g:tagbar_type_typescript = {
   \ 'ctagstype': 'typescript',
   \ 'kinds': [
@@ -140,7 +127,7 @@ let g:tagbar_type_typescript = {
 au BufNewFile,BufRead *.xaml        setf xml
 
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
+" autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
 autocmd FileType cs let g:ale_c_uncrustify_options = '-l CS'
 
 let g:ale_linters = {
@@ -226,10 +213,11 @@ let g:nodejs_complete_config = {
 " Time out on key codes but not mappings.
 " Basically this makes terminal Vim work sanely.
 let g:Powerline_symbols="fancy"
-let g:ycm_show_diagnostics_ui = 0
+" let g:ycm_show_diagnostics_ui = 0
+let g:fzf_session_path = $HOME . '/.dotfiles-darwin/.dotfiles-vim/session'
 
-set tags=./tags;,tags;
-set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
+" set tags=./tags;,tags;
+" set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
 " let g:syntastic_typescript_checkers = ['tslint']
 " let g:syntastic_ts_checkers = ['tslint']
 " let g:syntastic_javascript_checkers = ['eslint']
@@ -238,3 +226,32 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:templates_directory = ['~/.vim/templates']
 let g:ale_cs_csc_assembly_path = ['/Users/dnehrig/.nuget/packages/',
       \ '/usr/local/share/dotnet/sdk/NuGetFallbackFolder/']
+
+let g:startify_session_persistence = 1
+let g:startify_lists = [
+      \ { 'type': 'dir',       'header': ['   Recent files']  },
+      \ { 'type': 'sessions',  'header': ['   Saved sessions']  },
+      \ ]
+
+let g:startify_custom_header = [
+      \ "  ",
+      \ '                  .o+`                   ',
+      \ '                 `ooo/                   ',
+      \ '                `+oooo:                  ',
+      \ '               `+oooooo:                 ',
+      \ '               -+oooooo+:                ',
+      \ '             `/:-:++oooo+:               ',
+      \ '            `/++++/+++++++:              ',
+      \ '           `/++++++++++++++:             ',
+      \ '          `/+++moooooooooooo`            ',
+      \ '          mooosssso++osssssso`           ',
+      \ '        .oossssso-````/ossssss+`         ',
+      \ '       -osssssso.      :ssssssso.        ',
+      \ '      :osssssss/        osssso+++.       ',
+      \ '     /ossssssss/        +ssssooo/-       ',
+      \ '   `/ossssso+/:-        -:/+osssso+-     ',
+      \ '  `+sso+:-`                 `.-/+oso:    ',
+      \ ' `++:.                           `-/+/   ',
+      \ ' .`                                 `/   ',
+      \ '   ',
+      \ ]
