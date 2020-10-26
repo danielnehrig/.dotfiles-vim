@@ -97,5 +97,6 @@ source ~/.vim/startup/settings.vim
 " Compile and Run settings
 source ~/.vim/startup/compile.vim
 source ~/.vim/startup/run.vim
+source ~/.vim/startup/coc.vim
 
 " Syntax-specific settings
