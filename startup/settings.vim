@@ -146,6 +146,9 @@ let g:ale_fixers = {
       \    'html': ['prettier']
       \}
 let g:ale_fix_on_save = 1
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " Command for git grep
 " - fzf#vim#grep(command, with_column, [options], [fullscreen])

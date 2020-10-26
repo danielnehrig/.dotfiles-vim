@@ -3,12 +3,14 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=/usr/local/opt/fzf
 
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
+"python3 from powerline.vim import setup as powerline_setup
+"python3 powerline_setup()
+"python3 del powerline_setup
 
 call vundle#begin()
 Plugin 'iamcco/markdown-preview.nvim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'hsanson/vim-openapi'
 Plugin 'junegunn/vim-peekaboo'
 Plugin 'junegunn/vim-slash'
