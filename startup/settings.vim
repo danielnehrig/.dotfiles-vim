@@ -29,7 +29,6 @@ set completeopt=menu
 set mousemodel=popup
 set backspace=2
 set number
-set nocompatible
 set complete=.,w,b,u,t,i,kspell
 
 set enc=utf-8
@@ -92,9 +91,6 @@ let g:indent_guides_space_guides = 1
 let g:indent_guides_guide_size = 1
 
 let g:OmniSharp_server_use_mono = 1
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_typescript_checkers = ['tslint']
-let g:syntastic_cs_checkers = ['mcs']
 let g:OmniSharp_selector_ui = 'ctrlp'  " Use ctrlp.vim
 
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
@@ -139,13 +135,15 @@ let g:ale_linters = {
 
 let g:ale_fixers = {
       \    'javascript': ['eslint'],
-      \    'typescript': ['prettier'],
+      \    'typescript': ['prettier', 'tslint'],
       \    'vue': ['eslint'],
       \    'cs': ['uncrustify'],
       \    'scss': ['prettier'],
       \    'html': ['prettier']
       \}
 let g:ale_fix_on_save = 1
+
+" airline settings
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'

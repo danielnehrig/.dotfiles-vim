@@ -3,10 +3,6 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=/usr/local/opt/fzf
 
-"python3 from powerline.vim import setup as powerline_setup
-"python3 powerline_setup()
-"python3 del powerline_setup
-
 call vundle#begin()
 Plugin 'iamcco/markdown-preview.nvim'
 Plugin 'vim-airline/vim-airline'
@@ -51,7 +47,6 @@ Plugin 'Quramy/tsuquyomi'
 Plugin 'othree/yajs.vim'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'myhere/vim-nodejs-complete'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'mzlogin/vim-markdown-toc'
@@ -61,7 +56,6 @@ Plugin 'neoclide/coc.nvim'
 Plugin 'tpope/vim-surround.git'
 Plugin 'mattn/emmet-vim'
 Plugin 'airblade/vim-gitgutter.git'
-Plugin 'easymotion/vim-easymotion'
 Plugin 'vim-scripts/argtextobj.vim'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -70,10 +64,8 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'hail2u/vim-css3-syntax.git'
-Plugin 'jasmine/jasmine'
 Plugin 'majutsushi/tagbar'
 Plugin 'xolox/vim-misc'
-Plugin 'mtscout6/vim-tagbar-css'
 Plugin 'vim-scripts/a.vim'
 Plugin 'justinmk/vim-syntax-extra'
 Plugin 'cakebaker/scss-syntax.vim'
