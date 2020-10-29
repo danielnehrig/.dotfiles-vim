@@ -6,6 +6,10 @@ set rtp+=/usr/local/opt/fzf
 call vundle#begin()
 Plugin 'iamcco/markdown-preview.nvim'
 Plugin 'vim-airline/vim-airline'
+Plugin 'janko-m/vim-test'
+Plugin 'neomake/neomake'
+Plugin 'henrik/vim-yaml-helper'
+Plugin 'hsanson/vim-openapi'
 Plugin 'eliba2/vim-node-inspect'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'hsanson/vim-openapi'

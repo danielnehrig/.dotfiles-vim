@@ -256,3 +256,7 @@ let g:startify_custom_header = [
       \ ' .`                                 `/   ',
       \ '   ',
       \ ]
+
+let g:test#javascript#jest#options = '--reporters jest-vim-reporter'
+let g:test#typescript#jest#options = '--reporters jest-vim-reporter'
+let g:test#strategy = 'neomake'
