@@ -26,7 +26,7 @@ Plug 'tmux-plugins/vim-tmux'
 Plug 'xavierchow/vim-swagger-preview'
 Plug 'dense-analysis/ale'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'junegunn/fzf.vim', { 'dir': '~/.fzf', 'do': './install --all'  }
+Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-repeat'
 Plug 'zoubin/vim-gotofile'
 Plug 'jiangmiao/auto-pairs'
