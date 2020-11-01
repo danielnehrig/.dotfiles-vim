@@ -18,7 +18,7 @@ set cmdheight=2
 set nowrap
 set path+=**
 if &diff
-	set wrap
+  set wrap
 endif
 set diffopt+=iwhite
 set smartcase
@@ -66,8 +66,8 @@ set signcolumn=yes
 set colorcolumn=80
 
 if version > 720
-	set undofile
-	set undodir=~/vimundo/
+  set undofile
+  set undodir=~/vimundo/
 endif
 
 let mapleader='\'
@@ -109,25 +109,25 @@ let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 let g:tagbar_type_typescript = {
-  \ 'ctagstype': 'typescript',
-  \ 'kinds': [
-    \ 'c:classes',
-    \ 'n:modules',
-    \ 'f:functions',
-    \ 'v:variables',
-    \ 'v:varlambdas',
-    \ 'm:members',
-    \ 'i:interfaces',
-    \ 'e:enums',
-  \ ]
-\ }
-
-au BufNewFile,BufRead *.xaml        setf xml
+      \ 'ctagstype': 'typescript',
+      \ 'kinds': [
+      \ 'c:classes',
+      \ 'n:modules',
+      \ 'f:functions',
+      \ 'v:variables',
+      \ 'v:varlambdas',
+      \ 'm:members',
+      \ 'i:interfaces',
+      \ 'e:enums',
+      \ ]
+      \ }
 
 " ALE Settings
 let g:ale_linters = {
       \   'javascript': ['eslint'],
+      \   'jsx': ['stylelint', 'eslint'],
       \   'typescript': ['tsserver', 'tslint'],
+      \   'tsx': ['tsserver', 'tslint'],
       \   'cs': ['csc'],
       \   'vue': ['eslint']
       \}
@@ -156,11 +156,11 @@ let g:gitgutter_eager = 0
 
 let g:ycm_auto_trigger = 1
 let g:ycm_semantic_triggers = {
-    \   'css': [ 're!^\s{2}', 're!:\s+' ],
-    \   'scss': [ 're!\s{2}', 're!:\s+' ],
-    \   'javascript': [ '.', ':', '/', "'", '"', 'from', "re!import .* from '"],
-    \   'sass': [ 're!\s{2}', 're!:\s+' ],
-    \ }
+      \   'css': [ 're!^\s{2}', 're!:\s+' ],
+      \   'scss': [ 're!\s{2}', 're!:\s+' ],
+      \   'javascript': [ '.', ':', '/', "'", '"', 'from', "re!import .* from '"],
+      \   'sass': [ 're!\s{2}', 're!:\s+' ],
+      \ }
 
 let g:ycm_filetype_blacklist = { 'yaml': 1, 'yml': 1, 'lua': 1, 'json': 1, 'vim': 1, 'java': 1, 'groovy': 1  }
 autocmd BufNew,BufEnter * execute "silent! CocDisable"
@@ -169,9 +169,9 @@ autocmd BufLeave *.yaml,*.yml,*.json,*.vim,*.lua,*.java,*.groovy execute "silent
 
 
 let g:nodejs_complete_config = {
-            \  'js_compl_fn': 'jscomplete#CompleteJS',
-            \  'max_node_compl_len': 15
-            \}
+      \  'js_compl_fn': 'jscomplete#CompleteJS',
+      \  'max_node_compl_len': 15
+      \}
 
 " Time out on key codes but not mappings.
 " Basically this makes terminal Vim work sanely.
@@ -179,11 +179,6 @@ let g:Powerline_symbols="fancy"
 " let g:ycm_show_diagnostics_ui = 0
 let g:fzf_session_path = $HOME . '/.dotfiles-darwin/.dotfiles-vim/session'
 
-" set tags=./tags;,tags;
-" set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
-" let g:syntastic_typescript_checkers = ['tslint']
-" let g:syntastic_ts_checkers = ['tslint']
-" let g:syntastic_javascript_checkers = ['eslint']
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 " let g:ycm_log_level='debug'
 let g:templates_directory = ['~/.vim/templates']
