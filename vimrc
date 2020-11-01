@@ -4,7 +4,9 @@ filetype off
 call plug#begin('~/.vim/plugged')
 "==== Themes
 Plug 'rainglow/vim'
-Plug 'morhetz/gruvbox'
+"Plug 'morhetz/gruvbox'
+Plug 'Dave-Elec/gruvbox'
+Plug 'sainnhe/gruvbox-material'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -99,6 +101,6 @@ source ~/.vim/startup/settings.vim
 " Compile and Run settings
 source ~/.vim/startup/compile.vim
 source ~/.vim/startup/run.vim
-source ~/.vim/startup/coc.vim
+" source ~/.vim/startup/coc.vim
 
 " Syntax-specific settings

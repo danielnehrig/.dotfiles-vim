@@ -1,6 +1,7 @@
-no <down> ddp
+"============== Unmap arrow keys ===============
 no <left> <Nop>
 no <right> <Nop>
+no <down> ddp
 no <up> ddkP
 ino <down> <Nop>
 ino <left> <Nop>
@@ -59,12 +60,6 @@ nmap { {zz
 "open tag in new tab
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
-"quick pairs
-imap <leader>' ''<ESC>i
-imap <leader>" ""<ESC>i
-imap <leader>( ()<ESC>i
-imap <leader>[ []<ESC>i
-
 " replace string contents with recently copied text
 nmap <Leader>r" "_di"P
 nmap <Leader>c" "_di"Pa
@@ -98,8 +93,9 @@ nmap ga <Plug>(EasyAlign)
 
 nmap <Leader>l <Plug>(Limelight)
 xmap <Leader>l <Plug>(Limelight)
+
 " `SPC l s` - save current session
 nnoremap <leader>ls :SSave<CR>
-"
+
 " " `SPC l l` - list sessions / switch to different project
 nnoremap <leader>ll :SClose<CR>"
