@@ -66,8 +66,6 @@ nmap <Leader>c" "_di"Pa
 nmap <Leader>r' '_di'P
 nmap <Leader>c' '_di'Pa
 
-imap <C-J>s <Plug>snipMateNextOrTrigger
-
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
 
@@ -76,6 +74,7 @@ nmap <Leader>b :Buffers<CR>
 nmap <C-p> :Files<CR>
 nmap <F9> :TagbarToggle<CR>
 nmap <C-]> :YcmCompleter GoTo<CR>
+nmap <C-[> :ALEFix<CR>
 nmap <Leader>c <Plug>(Prettier)
 
 let g:UltiSnipsExpandTrigger="<c-s>"
@@ -99,3 +98,4 @@ nnoremap <leader>ls :SSave<CR>
 
 " " `SPC l l` - list sessions / switch to different project
 nnoremap <leader>ll :SClose<CR>"
+nnoremap <F1> :call ToggleFocusMode()<cr>

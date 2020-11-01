@@ -17,8 +17,8 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'prettier/vim-prettier'
 Plug 'dense-analysis/ale'
 "== General
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all'  }
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+Plug 'Valloric/YouCompleteMe', { 'do': 'rm -rf ./third_party/ycmd/third_party/tern_runtime/node_modules && ./install.py --ts-completer --rust-completer'  }
+Plug 'neoclide/coc.nvim', {'do': 'yarn'}
 "= md
 Plug 'iamcco/markdown-preview.nvim'
 Plug 'plasticboy/vim-markdown'
@@ -27,6 +27,7 @@ Plug 'mzlogin/vim-markdown-toc'
 Plug 'hsanson/vim-openapi'
 Plug 'mrk21/yaml-vim'
 Plug 'xavierchow/vim-swagger-preview'
+Plug 'henrik/vim-yaml-helper'
 "= JS / TS
 Plug 'moll/vim-node'
 Plug 'leafgarland/typescript-vim'
@@ -41,7 +42,6 @@ Plug 'eliba2/vim-node-inspect'
 "==== Utility
 Plug 'preservim/tagbar'
 Plug 'neomake/neomake'
-Plug 'henrik/vim-yaml-helper'
 Plug 'junegunn/vim-peekaboo'
 Plug 'mhinz/vim-startify'
 Plug 'junegunn/vim-easy-align'

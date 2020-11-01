@@ -53,4 +53,3 @@ function! ToggleFocusMode()
 		colorscheme skittles_berry "re-call your colorscheme
 	endif
 endfunc
-nnoremap <F1> :call ToggleFocusMode()<cr>
