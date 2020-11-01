@@ -14,7 +14,6 @@ Plug 'arcticicestudio/nord-vim'
 
 "==== Programming Related
 "=== Linting
-Plug 'prettier/vim-prettier'
 Plug 'dense-analysis/ale'
 "== General
 Plug 'Valloric/YouCompleteMe', { 'do': 'rm -rf ./third_party/ycmd/third_party/tern_runtime/node_modules && ./install.py --ts-completer --rust-completer'  }

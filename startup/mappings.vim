@@ -76,7 +76,6 @@ nmap <F9> :TagbarToggle<CR>
 nmap <C-]> :YcmCompleter GoTo<CR>
 nmap <C-[> :YcmCompleter FixIt<CR>
 nmap <space>a :ALEFix<CR>
-nmap <Leader>c <Plug>(Prettier)
 
 let g:UltiSnipsExpandTrigger="<c-s>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
