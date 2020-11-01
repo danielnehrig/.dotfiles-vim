@@ -2,68 +2,84 @@ set nocompatible
 filetype off
 
 call plug#begin('~/.vim/plugged')
-Plug 'iamcco/markdown-preview.nvim'
-Plug 'vim-airline/vim-airline'
-Plug 'janko-m/vim-test'
-Plug 'neomake/neomake'
-Plug 'henrik/vim-yaml-helper'
-Plug 'eliba2/vim-node-inspect'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'hsanson/vim-openapi'
-Plug 'junegunn/vim-peekaboo'
-Plug 'junegunn/vim-slash'
-Plug 'mhinz/vim-startify'
-Plug 'arcticicestudio/nord-vim'
-Plug 'junegunn/vim-emoji'
-Plug 'junegunn/vim-easy-align'
+"==== Themes
 Plug 'rainglow/vim'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
-Plug 'VundleVim/Vundle.vim'
-Plug 'dominickng/fzf-session.vim'
-Plug 'mrk21/yaml-vim'
-Plug 'tmux-plugins/vim-tmux'
-Plug 'xavierchow/vim-swagger-preview'
-Plug 'dense-analysis/ale'
-Plug 'nathanaelkane/vim-indent-guides'
-Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-repeat'
-Plug 'zoubin/vim-gotofile'
-Plug 'jiangmiao/auto-pairs'
-Plug 'scrooloose/nerdcommenter'
-Plug 'aperezdc/vim-template'
-Plug 'adelarsq/vim-matchit'
+Plug 'morhetz/gruvbox'
+Plug 'ryanoasis/vim-devicons'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'arcticicestudio/nord-vim'
+
+"==== Programming Related
+"=== Linting
 Plug 'prettier/vim-prettier'
-Plug 'sukima/xmledit'
-Plug 'moll/vim-node'
-Plug 'benmills/vimux'
-Plug 'tyewang/vimux-jest-test'
-Plug 'leafgarland/typescript-vim'
-Plug 'sickill/vim-pasta'
-Plug 'isRuslan/vim-es6'
-Plug 'Quramy/tsuquyomi'
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
-Plug 'mzlogin/vim-markdown-toc'
-Plug 'tpope/vim-fugitive'
+Plug 'dense-analysis/ale'
+"== General
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all'  }
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+"= md
+Plug 'iamcco/markdown-preview.nvim'
+Plug 'plasticboy/vim-markdown'
+Plug 'mzlogin/vim-markdown-toc'
+"= yaml
+Plug 'hsanson/vim-openapi'
+Plug 'mrk21/yaml-vim'
+Plug 'xavierchow/vim-swagger-preview'
+"= JS / TS
+Plug 'moll/vim-node'
+Plug 'leafgarland/typescript-vim'
+
+"==== Testing
+Plug 'janko-m/vim-test'
+Plug 'tyewang/vimux-jest-test'
+
+"==== Debugging
+Plug 'eliba2/vim-node-inspect'
+
+"==== Utility
+Plug 'preservim/tagbar'
+Plug 'neomake/neomake'
+Plug 'henrik/vim-yaml-helper'
+Plug 'junegunn/vim-peekaboo'
+Plug 'mhinz/vim-startify'
+Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/vim-emoji'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'tpope/vim-repeat'
+Plug 'zoubin/vim-gotofile'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'jiangmiao/auto-pairs'
+Plug 'adelarsq/vim-matchit'
+Plug 'scrooloose/nerdcommenter'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
-Plug 'mattn/emmet-vim'
-Plug 'airblade/vim-gitgutter'
-Plug 'vim-scripts/argtextobj.vim'
+Plug 'godlygeek/tabular'
+Plug 'junegunn/vim-slash'
+
+"==== File Managment
 Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
+Plug 'junegunn/fzf.vim'
+Plug 'dominickng/fzf-session.vim'
+
+"==== Snippets
+Plug 'isRuslan/vim-es6'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'majutsushi/tagbar'
-Plug 'xolox/vim-misc'
-Plug 'vim-scripts/a.vim'
-Plug 'tpope/vim-haml'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'jamescarr/snipmate-nodejs'
+Plug 'mattn/emmet-vim'
+Plug 'aperezdc/vim-template'
+
+"==== git
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
+"==== vim extendsion
+Plug 'tomtom/tlib_vim'
+Plug 'xolox/vim-misc'
+
+"==== Unknown
 call plug#end()
 
 "============== Filetype stuff ===============
