@@ -2,3 +2,4 @@ bundle
 .dotfiles-vim
 session
 plugged
+.netrwhist
