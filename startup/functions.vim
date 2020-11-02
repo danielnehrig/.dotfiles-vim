@@ -53,3 +53,4 @@ function! ToggleFocusMode()
 		colorscheme skittles_berry "re-call your colorscheme
 	endif
 endfunc
+

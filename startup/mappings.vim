@@ -14,17 +14,11 @@ vno <up> <Nop>
 
 "============== Custom Mappings ===============
 " general mapping
-nmap <C-Tab> :tabnext<CR>
-nmap <C-S-Tab> :tabprevious<CR>
-map <C-S-Tab> :tabprevious<CR>
-map <C-Tab> :tabnext<CR>
-imap <C-S-Tab> <ESC>:tabprevious<CR>
-imap <C-Tab> <ESC>:tabnext<CR>
 noremap <F7> :set expandtab!<CR>
-nmap <Leader>h :tabnew %:h<CR>
+nmap <Leader>h :tabnew <CR>
 
 "turn off search highlighting
-nmap <C-n> :noh<CR>
+nmap <C-h> :noh<CR>
 
 "custom comma motion mapping
 nmap di, f,dT,
@@ -57,17 +51,14 @@ nmap N Nzz
 nmap } }zz
 nmap { {zz
 
-"open tag in new tab
-map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-
 " replace string contents with recently copied text
 nmap <Leader>r" "_di"P
 nmap <Leader>c" "_di"Pa
 nmap <Leader>r' '_di'P
 nmap <Leader>c' '_di'Pa
 
-nmap ]h <Plug>GitGutterNextHunk
-nmap [h <Plug>GitGutterPrevHunk
+nmap ]h <Plug>(GitGutterNextHunk)
+nmap [h <Plug>(GitGutterPrevHunk)
 
 nmap <Leader>n :NERDTreeToggle<CR>
 nmap <Leader>b :Buffers<CR>
@@ -95,7 +86,8 @@ xmap <Leader>l <Plug>(Limelight)
 
 " `SPC l s` - save current session
 nnoremap <leader>ls :SSave<CR>
+nnoremap <space>pf :Sessions<CR>
 
 " " `SPC l l` - list sessions / switch to different project
 nnoremap <leader>ll :SClose<CR>"
-nnoremap <F1> :call ToggleFocusMode()<cr>
+nnoremap <F1> :call ToggleFocusMode()<CR>
