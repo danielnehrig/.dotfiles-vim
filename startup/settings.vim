@@ -100,6 +100,7 @@ let g:OmniSharp_server_use_mono = 1
 let g:OmniSharp_selector_ui = 'ctrlp'  " Use ctrlp.vim
 
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
+autocmd BufNewFile,BufRead * CocDisable
 
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
