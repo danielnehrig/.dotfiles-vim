@@ -14,6 +14,7 @@ set nojoinspaces
 set term=screen-256color
 set display=uhex
 set shortmess=aAIsT
+set shortmess+=c
 set cmdheight=2
 set nowrap
 set path+=**
@@ -23,7 +24,10 @@ endif
 set diffopt+=iwhite
 set smartcase
 set relativenumber
+set nobackup
 set nowritebackup
+set updatetime=300
+set hidden
 
 set completeopt=menu
 set mousemodel=popup
@@ -97,8 +101,6 @@ let g:OmniSharp_selector_ui = 'ctrlp'  " Use ctrlp.vim
 
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
 
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|npm-packages-offline-cache'
-
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
@@ -147,11 +149,7 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
-
-" Override Colors command. You can safely do this in your .vimrc as fzf.vim
-" will not override existing commands.
-
-let g:gitgutter_realtime = 0
+let g:gitgutter_realtime = 1
 let g:gitgutter_eager = 0
 
 let g:ycm_auto_trigger = 1
@@ -161,12 +159,6 @@ let g:ycm_semantic_triggers = {
       \   'javascript': [ '.', ':', '/', "'", '"', 'from', "re!import .* from '"],
       \   'sass': [ 're!\s{2}', 're!:\s+' ],
       \ }
-
-let g:ycm_filetype_blacklist = { 'yaml': 1, 'yml': 1, 'lua': 1, 'json': 1, 'vim': 1, 'java': 1, 'groovy': 1  }
-autocmd BufNew,BufEnter * execute "silent! CocDisable"
-autocmd BufNew,BufEnter *.yaml,*.json,*.yaml,*.yml,*.lua,*.java,*.groovy execute "silent! CocEnable"
-autocmd BufLeave *.yaml,*.yml,*.json,*.vim,*.lua,*.java,*.groovy execute "silent! CocDisable"
-
 
 let g:nodejs_complete_config = {
       \  'js_compl_fn': 'jscomplete#CompleteJS',
@@ -214,8 +206,8 @@ let g:startify_custom_header = [
       \ '   ',
       \ ]
 
-let g:test#javascript#jest#options = '--reporters jest-vim-reporter'
-let g:test#typescript#jest#options = '--reporters jest-vim-reporter'
+let g:test#javascript#runner = 'jest'
+let g:test#typescript#runner = 'jest'
 let g:test#strategy = 'neomake'
 
 " returns all modified files of the current git repo
@@ -232,6 +224,16 @@ function! s:gitUntracked()
     return map(files, "{'line': v:val, 'path': v:val}")
 endfunction
 
+" When writing a buffer (no delay).
+call neomake#configure#automake('w')
+" When writing a buffer (no delay), and on normal mode changes (after 750ms).
+call neomake#configure#automake('nw', 750)
+" When reading a buffer (after 1s), and when writing (no delay).
+call neomake#configure#automake('rw', 1000)
+" Full config: when writing or reading a buffer, and on changes in insert and
+" normal mode (after 500ms; no delay when writing).
+call neomake#configure#automake('nrwi', 500)
+
 let g:startify_change_to_dir = 0
 let g:startify_lists = [
         \ { 'type': 'files',     'header': ['   MRU']            },
@@ -242,3 +244,33 @@ let g:startify_lists = [
         \ { 'type': function('s:gitUntracked'), 'header': ['   git untracked']},
         \ { 'type': 'commands',  'header': ['   Commands']       },
         \ ]
+
+" initially empty status
+let g:testing_status = ''
+
+" Start test
+function! TestStarted() abort
+  let g:testing_status = 'Test ⌛'
+endfunction
+
+" Show message when all tests are passing
+function! TestFinished() abort
+  let context = g:neomake_hook_context
+  if context.jobinfo.exit_code == 0
+    let g:testing_status = 'Test ✅'
+  endif
+  if context.jobinfo.exit_code == 1
+    let g:testing_status = 'Test ❌'
+  endif
+endfunction
+augroup neomake_hook
+  au!
+  autocmd User NeomakeJobFinished call TestFinished()
+  autocmd User NeomakeJobStarted call TestStarted()
+augroup END
+
+let g:test#javascript#jest#executable = 'npx jest --config ./app/views/jest.config.js --forceExit --detectOpenHandles'
+let g:test#typescript#jest#executable = 'npx jest --config ./app/views/jest.config.js --forceExit --detectOpenHandles'
+let g:test#ts#jest#executable = 'npx jest --config ./app/views/jest.config.js --forceExit --detectOpenHandles'
+let g:test#js#jest#executable = 'npx jest --config ./app/views/jest.config.js --forceExit --detectOpenHandles'
+let g:test#preserve_screen = 1

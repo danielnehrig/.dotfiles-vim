@@ -17,9 +17,12 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'dense-analysis/ale'
 "== General
 Plug 'Valloric/YouCompleteMe', { 'do': 'rm -rf ./third_party/ycmd/third_party/tern_runtime/node_modules && ./install.py --ts-completer --rust-completer'  }
+Plug 'ycm-core/lsp-examples', {'do': './install.py --all'}
 Plug 'neoclide/coc.nvim', {'do': 'yarn'}
+"= zsh
+Plug 'tjdevries/coc-zsh'
 "= md
-Plug 'iamcco/markdown-preview.nvim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'   }
 Plug 'plasticboy/vim-markdown'
 Plug 'mzlogin/vim-markdown-toc'
 "= yaml
@@ -32,7 +35,8 @@ Plug 'moll/vim-node'
 Plug 'leafgarland/typescript-vim'
 
 "==== Testing
-Plug 'janko-m/vim-test'
+Plug 'vim-test/vim-test'
+Plug 'tpope/vim-dispatch'
 Plug 'tyewang/vimux-jest-test'
 
 "==== Debugging
@@ -96,10 +100,11 @@ source ~/.vim/startup/commands.vim
 source ~/.vim/startup/functions.vim
 source ~/.vim/startup/mappings.vim
 source ~/.vim/startup/settings.vim
+source ~/.vim/plugged/lsp-examples/vimrc.generated
+" source ~/.vim/startup/coc.vim
 
 " Compile and Run settings
 source ~/.vim/startup/compile.vim
 source ~/.vim/startup/run.vim
-" source ~/.vim/startup/coc.vim
 
 " Syntax-specific settings
