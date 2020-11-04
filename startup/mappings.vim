@@ -65,7 +65,7 @@ nmap <Leader>b :Buffers<CR>
 nmap <C-p> :Files<CR>
 nmap <F9> :TagbarToggle<CR>
 nmap <C-]> :YcmCompleter GoTo<CR>
-nmap <C-[> :YcmCompleter FixIt<CR>
+nmap <space>[ :YcmCompleter FixIt<CR>
 nmap <space>a :ALEFix<CR>
 
 let g:UltiSnipsExpandTrigger="<c-s>"
