@@ -19,6 +19,7 @@ Plug 'dense-analysis/ale'
 Plug 'Valloric/YouCompleteMe', { 'do': 'rm -rf ./third_party/ycmd/third_party/tern_runtime/node_modules && ./install.py --ts-completer --rust-completer'  }
 Plug 'ycm-core/lsp-examples', {'do': './install.py --all'}
 Plug 'neoclide/coc.nvim', {'do': 'yarn'}
+Plug 'lilydjwg/colorizer'
 "= zsh
 Plug 'tjdevries/coc-zsh'
 "= md
