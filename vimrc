@@ -18,9 +18,11 @@ Plug 'dense-analysis/ale'
 "== General
 Plug 'Valloric/YouCompleteMe', { 'do': 'rm -rf ./third_party/ycmd/third_party/tern_runtime/node_modules && ./install.py --ts-completer --rust-completer'  }
 Plug 'ycm-core/lsp-examples', {'do': './install.py --all'}
-Plug 'neoclide/coc.nvim', {'do': 'yarn'}
+"Plug 'neoclide/coc.nvim', {'do': 'yarn'}
+"
 "= zsh
-Plug 'tjdevries/coc-zsh'
+"Plug 'tjdevries/coc-zsh'
+"
 "= md
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'   }
 Plug 'plasticboy/vim-markdown'
@@ -94,7 +96,7 @@ syntax enable
 
 "============== Script configs ===============
 
-  " Load custom settings
+" Load custom settings
 source ~/.vim/startup/color.vim
 source ~/.vim/startup/commands.vim
 source ~/.vim/startup/functions.vim
@@ -108,3 +110,4 @@ source ~/.vim/startup/compile.vim
 source ~/.vim/startup/run.vim
 
 " Syntax-specific settings
+" Project specific settings

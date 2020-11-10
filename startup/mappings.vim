@@ -39,10 +39,13 @@ nmap [c [czz
 " default to very magic
 no / /\v
 
-" gO to create a new line below cursor in normal mode
-nmap g<C-O> o<ESC>k
 " g<Ctrl+o> to create a new line above cursor (Ctrl to prevent collision with 'go' command)
+nmap g<C-O> o<ESC>k
+" gO to create a new line below cursor in normal mode
 nmap gO O<ESC>j
+
+
+
 
 "I really hate that things don't auto-center
 nmap G Gzz
@@ -89,5 +92,4 @@ nnoremap <leader>ls :SSave<CR>
 nnoremap <space>pf :Sessions<CR>
 
 " " `SPC l l` - list sessions / switch to different project
-nnoremap <leader>ll :SClose<CR>"
-nnoremap <F1> :call ToggleFocusMode()<CR>
+nnoremap <leader>ll :SClose<CR>

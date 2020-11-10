@@ -2,6 +2,7 @@
 set dict=/usr/share/dict/words
 set cursorline
 set showcmd
+set ttymouse=xterm2
 set ruler
 set incsearch
 set wildmenu
@@ -49,7 +50,7 @@ set linespace=0
 set history=1000
 
 set laststatus=2
-set mouse=a
+set mouse=n
 set vb
 set ffs=unix,dos
 set ff=unix
@@ -96,11 +97,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
 let g:indent_guides_space_guides = 1
 let g:indent_guides_guide_size = 1
 
-let g:OmniSharp_server_use_mono = 1
-let g:OmniSharp_selector_ui = 'ctrlp'  " Use ctrlp.vim
-
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
-autocmd BufNewFile,BufRead * CocDisable
 
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
@@ -275,3 +272,4 @@ let g:test#typescript#jest#executable = 'npx jest --config ./app/views/jest.conf
 let g:test#ts#jest#executable = 'npx jest --config ./app/views/jest.config.js --forceExit --detectOpenHandles'
 let g:test#js#jest#executable = 'npx jest --config ./app/views/jest.config.js --forceExit --detectOpenHandles'
 let g:test#preserve_screen = 1
+let g:ycm_confirm_extra_conf = 0
