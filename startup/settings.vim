@@ -275,3 +275,4 @@ let g:test#typescript#jest#executable = 'npx jest --config ./app/views/jest.conf
 let g:test#ts#jest#executable = 'npx jest --config ./app/views/jest.config.js --forceExit --detectOpenHandles'
 let g:test#js#jest#executable = 'npx jest --config ./app/views/jest.config.js --forceExit --detectOpenHandles'
 let g:test#preserve_screen = 1
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
