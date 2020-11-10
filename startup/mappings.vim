@@ -89,5 +89,5 @@ nnoremap <leader>ls :SSave<CR>
 nnoremap <space>pf :Sessions<CR>
 
 " " `SPC l l` - list sessions / switch to different project
-nnoremap <leader>ll :SClose<CR>"
-nnoremap <F1> :call ToggleFocusMode()<CR>
+nnoremap <leader>ll :SClose<CR>
+nnoremap <leader>N :NERDTreeFind<CR>

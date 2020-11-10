@@ -82,7 +82,6 @@ else
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
-let NERDTreeMinimalUI = 0
 let NERDTreeDirArrows = 1
 
 set ts=2 sw=2 et
@@ -94,9 +93,6 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
 let g:indent_guides_space_guides = 1
 let g:indent_guides_guide_size = 1
-
-let g:OmniSharp_server_use_mono = 1
-let g:OmniSharp_selector_ui = 'ctrlp'  " Use ctrlp.vim
 
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
 autocmd BufNewFile,BufRead * CocDisable
@@ -183,28 +179,18 @@ let g:startify_lists = [
       \ { 'type': 'sessions',  'header': ['   Saved sessions']  },
       \ ]
 
-let g:startify_custom_header = [
-      \ "  ",
-      \ '                  .o+`                   ',
-      \ '                 `ooo/                   ',
-      \ '                `+oooo:                  ',
-      \ '               `+oooooo:                 ',
-      \ '               -+oooooo+:                ',
-      \ '             `/:-:++oooo+:               ',
-      \ '            `/++++/+++++++:              ',
-      \ '           `/++++++++++++++:             ',
-      \ '          `/+++moooooooooooo`            ',
-      \ '          mooosssso++osssssso`           ',
-      \ '        .oossssso-````/ossssss+`         ',
-      \ '       -osssssso.      :ssssssso.        ',
-      \ '      :osssssss/        osssso+++.       ',
-      \ '     /ossssssss/        +ssssooo/-       ',
-      \ '   `/ossssso+/:-        -:/+osssso+-     ',
-      \ '  `+sso+:-`                 `.-/+oso:    ',
-      \ ' `++:.                           `-/+/   ',
-      \ ' .`                                 `/   ',
-      \ '   ',
-      \ ]
+let fock = matchstr(getcwd(), 'dotfiles')
+
+if !empty(fock)
+  let g:startify_custom_header = [
+        \ "       __      __  _____ __         ",
+        \ "  ____/ /___  / /_/ __(_) /__  _____",
+        \ " / __  / __ \/ __/ /_/ / / _ \/ ___/",
+        \ "/ /_/ / /_/ / /_/ __/ / /  __(__  ) ",
+        \ "\__,_/\____/\__/_/ /_/_/\___/____/  ",
+        \ '   '
+        \ ]
+endif
 
 let g:test#javascript#runner = 'jest'
 let g:test#typescript#runner = 'jest'
@@ -276,3 +262,5 @@ let g:test#ts#jest#executable = 'npx jest --config ./app/views/jest.config.js --
 let g:test#js#jest#executable = 'npx jest --config ./app/views/jest.config.js --forceExit --detectOpenHandles'
 let g:test#preserve_screen = 1
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeAutoDeleteBuffer = 1"
