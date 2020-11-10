@@ -13,8 +13,7 @@ set synmaxcol=0
 set nojoinspaces
 set term=screen-256color
 set display=uhex
-set shortmess=aAIsT
-set shortmess+=c
+set shortmess=a
 set cmdheight=2
 set nowrap
 set path+=**
@@ -270,6 +269,7 @@ augroup neomake_hook
   autocmd User NeomakeJobStarted call TestStarted()
 augroup END
 
+let g:ycm_confirm_extra_conf = 0
 let g:test#javascript#jest#executable = 'npx jest --config ./app/views/jest.config.js --forceExit --detectOpenHandles'
 let g:test#typescript#jest#executable = 'npx jest --config ./app/views/jest.config.js --forceExit --detectOpenHandles'
 let g:test#ts#jest#executable = 'npx jest --config ./app/views/jest.config.js --forceExit --detectOpenHandles'
