@@ -174,6 +174,8 @@ let g:ale_cs_csc_assembly_path = ['/Users/dnehrig/.nuget/packages/',
       \ '/usr/local/share/dotnet/sdk/NuGetFallbackFolder/']
 
 let g:startify_session_persistence = 1
+let g:startify_session_autoload = 1
+let g:startify_session_delete_buffers = 1
 let g:startify_lists = [
       \ { 'type': 'dir',       'header': ['   Recent files']  },
       \ { 'type': 'sessions',  'header': ['   Saved sessions']  },
