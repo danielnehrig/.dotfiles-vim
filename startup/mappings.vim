@@ -93,3 +93,4 @@ nnoremap <space>pf :Sessions<CR>
 
 " " `SPC l l` - list sessions / switch to different project
 nnoremap <leader>ll :SClose<CR>
+nnoremap <leader>N :NERDTreeFind<CR>

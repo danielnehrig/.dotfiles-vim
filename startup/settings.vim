@@ -14,8 +14,7 @@ set synmaxcol=0
 set nojoinspaces
 set term=screen-256color
 set display=uhex
-set shortmess=aAIsT
-set shortmess+=c
+set shortmess=a
 set cmdheight=2
 set nowrap
 set path+=**
@@ -84,7 +83,6 @@ else
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
-let NERDTreeMinimalUI = 0
 let NERDTreeDirArrows = 1
 
 set ts=2 sw=2 et
@@ -176,32 +174,11 @@ let g:ale_cs_csc_assembly_path = ['/Users/dnehrig/.nuget/packages/',
       \ '/usr/local/share/dotnet/sdk/NuGetFallbackFolder/']
 
 let g:startify_session_persistence = 1
+let g:startify_session_autoload = 1
+let g:startify_session_delete_buffers = 1
 let g:startify_lists = [
       \ { 'type': 'dir',       'header': ['   Recent files']  },
       \ { 'type': 'sessions',  'header': ['   Saved sessions']  },
-      \ ]
-
-let g:startify_custom_header = [
-      \ "  ",
-      \ '                  .o+`                   ',
-      \ '                 `ooo/                   ',
-      \ '                `+oooo:                  ',
-      \ '               `+oooooo:                 ',
-      \ '               -+oooooo+:                ',
-      \ '             `/:-:++oooo+:               ',
-      \ '            `/++++/+++++++:              ',
-      \ '           `/++++++++++++++:             ',
-      \ '          `/+++moooooooooooo`            ',
-      \ '          mooosssso++osssssso`           ',
-      \ '        .oossssso-````/ossssss+`         ',
-      \ '       -osssssso.      :ssssssso.        ',
-      \ '      :osssssss/        osssso+++.       ',
-      \ '     /ossssssss/        +ssssooo/-       ',
-      \ '   `/ossssso+/:-        -:/+osssso+-     ',
-      \ '  `+sso+:-`                 `.-/+oso:    ',
-      \ ' `++:.                           `-/+/   ',
-      \ ' .`                                 `/   ',
-      \ '   ',
       \ ]
 
 let g:test#javascript#runner = 'jest'
@@ -267,9 +244,12 @@ augroup neomake_hook
   autocmd User NeomakeJobStarted call TestStarted()
 augroup END
 
+let g:ycm_confirm_extra_conf = 0
 let g:test#javascript#jest#executable = 'npx jest --config ./app/views/jest.config.js --forceExit --detectOpenHandles'
 let g:test#typescript#jest#executable = 'npx jest --config ./app/views/jest.config.js --forceExit --detectOpenHandles'
 let g:test#ts#jest#executable = 'npx jest --config ./app/views/jest.config.js --forceExit --detectOpenHandles'
 let g:test#js#jest#executable = 'npx jest --config ./app/views/jest.config.js --forceExit --detectOpenHandles'
 let g:test#preserve_screen = 1
-let g:ycm_confirm_extra_conf = 0
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeAutoDeleteBuffer = 1"

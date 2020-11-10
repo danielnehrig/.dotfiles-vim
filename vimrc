@@ -20,6 +20,7 @@ Plug 'Valloric/YouCompleteMe', { 'do': 'rm -rf ./third_party/ycmd/third_party/te
 Plug 'ycm-core/lsp-examples', {'do': './install.py --all'}
 "Plug 'neoclide/coc.nvim', {'do': 'yarn'}
 "
+Plug 'lilydjwg/colorizer'
 "= zsh
 "Plug 'tjdevries/coc-zsh'
 "
@@ -46,6 +47,7 @@ Plug 'eliba2/vim-node-inspect'
 
 "==== Utility
 Plug 'preservim/tagbar'
+Plug 'unblevable/quick-scope'
 Plug 'neomake/neomake'
 Plug 'junegunn/vim-peekaboo'
 Plug 'mhinz/vim-startify'
