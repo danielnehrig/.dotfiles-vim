@@ -2,6 +2,7 @@
 set dict=/usr/share/dict/words
 set cursorline
 set showcmd
+set ttymouse=xterm2
 set ruler
 set incsearch
 set wildmenu
@@ -48,7 +49,7 @@ set linespace=0
 set history=1000
 
 set laststatus=2
-set mouse=a
+set mouse=n
 set vb
 set ffs=unix,dos
 set ff=unix
@@ -95,7 +96,6 @@ let g:indent_guides_space_guides = 1
 let g:indent_guides_guide_size = 1
 
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
-autocmd BufNewFile,BufRead * CocDisable
 
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
@@ -180,19 +180,6 @@ let g:startify_lists = [
       \ { 'type': 'dir',       'header': ['   Recent files']  },
       \ { 'type': 'sessions',  'header': ['   Saved sessions']  },
       \ ]
-
-let fock = matchstr(getcwd(), 'dotfiles')
-
-if !empty(fock)
-  let g:startify_custom_header = [
-        \ "       __      __  _____ __         ",
-        \ "  ____/ /___  / /_/ __(_) /__  _____",
-        \ " / __  / __ \/ __/ /_/ / / _ \/ ___/",
-        \ "/ /_/ / /_/ / /_/ __/ / /  __(__  ) ",
-        \ "\__,_/\____/\__/_/ /_/_/\___/____/  ",
-        \ '   '
-        \ ]
-endif
 
 let g:test#javascript#runner = 'jest'
 let g:test#typescript#runner = 'jest'

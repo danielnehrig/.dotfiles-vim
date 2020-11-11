@@ -39,10 +39,13 @@ nmap [c [czz
 " default to very magic
 no / /\v
 
-" gO to create a new line below cursor in normal mode
-nmap g<C-O> o<ESC>k
 " g<Ctrl+o> to create a new line above cursor (Ctrl to prevent collision with 'go' command)
+nmap g<C-O> o<ESC>k
+" gO to create a new line below cursor in normal mode
 nmap gO O<ESC>j
+
+
+
 
 "I really hate that things don't auto-center
 nmap G Gzz
