@@ -113,6 +113,7 @@ source ~/.vim/startup/functions.vim
 source ~/.vim/startup/mappings.vim
 source ~/.vim/startup/settings.vim
 source ~/.vim/startup/rnvim.vim
+source ~/.vim/startup/which.vim
 source ~/.vim/plugged/lsp-examples/lsp.vim
 " source ~/.vim/startup/coc.vim
 
