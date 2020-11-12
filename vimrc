@@ -69,6 +69,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
 Plug 'junegunn/vim-slash'
+Plug 'liuchengxu/vim-which-key'
 
 "==== File Managment
 Plug 'scrooloose/nerdtree'
