@@ -8,9 +8,13 @@ Plug 'rainglow/vim'
 Plug 'Dave-Elec/gruvbox'
 Plug 'sainnhe/gruvbox-material'
 Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'arcticicestudio/nord-vim'
+if has('nvim')
+  Plug 'kyazdani42/nvim-web-devicons'
+endif
 
 "==== Programming Related
 "=== Linting
