@@ -1,8 +1,10 @@
-"============== General Settings ===============
+" "============== General Settings ===============
 set dict=/usr/share/dict/words
 set cursorline
 set showcmd
-set ttymouse=xterm2
+if !has('nvim')
+  set ttymouse=xterm2
+endif
 set ruler
 set incsearch
 set wildmenu
@@ -12,7 +14,9 @@ set autoread
 set encoding=utf-8
 set synmaxcol=0
 set nojoinspaces
-set term=screen-256color
+if !has('nvim')
+  set term=screen-256color
+endif
 set display=uhex
 set shortmess=a
 set cmdheight=2

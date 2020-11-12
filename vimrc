@@ -68,7 +68,9 @@ Plug 'junegunn/vim-slash'
 
 "==== File Managment
 Plug 'scrooloose/nerdtree'
-Plug 'kevinhwang91/rnvimr'
+if has('nvim')
+  Plug 'kevinhwang91/rnvimr'
+endif
 Plug 'junegunn/fzf.vim'
 Plug 'dominickng/fzf-session.vim'
 
@@ -106,7 +108,7 @@ source ~/.vim/startup/functions.vim
 source ~/.vim/startup/mappings.vim
 source ~/.vim/startup/settings.vim
 source ~/.vim/startup/rnvim.vim
-source ~/.vim/plugged/lsp-examples/vimrc.generated
+source ~/.vim/plugged/lsp-examples/lsp.vim
 " source ~/.vim/startup/coc.vim
 
 " Compile and Run settings
