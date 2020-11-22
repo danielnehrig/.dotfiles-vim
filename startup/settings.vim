@@ -128,15 +128,15 @@ let g:tagbar_type_typescript = {
 let g:ale_linters = {
       \   'javascript': ['eslint'],
       \   'jsx': ['stylelint', 'eslint'],
-      \   'typescript': ['tsserver', 'tslint'],
-      \   'tsx': ['tsserver', 'tslint'],
+      \   'typescript': ['tsserver', 'eslint'],
+      \   'tsx': ['tsserver', 'eslint'],
       \   'cs': ['csc'],
       \   'vue': ['eslint']
       \}
 
 let g:ale_fixers = {
       \    'javascript': ['eslint'],
-      \    'typescript': ['prettier', 'tslint'],
+      \    'typescript': ['prettier', 'eslint'],
       \    'vue': ['eslint'],
       \    'cs': ['uncrustify'],
       \    'scss': ['prettier'],
