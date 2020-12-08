@@ -51,6 +51,7 @@ Plug 'eliba2/vim-node-inspect'
 
 "==== Utility
 Plug 'preservim/tagbar'
+Plug 'severin-lemaignan/vim-minimap'
 Plug 'unblevable/quick-scope'
 Plug 'neomake/neomake'
 Plug 'junegunn/vim-peekaboo'
