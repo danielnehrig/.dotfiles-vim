@@ -128,7 +128,7 @@ let g:tagbar_type_typescript = {
 let g:ale_linters = {
       \   'javascript': ['eslint'],
       \   'jsx': ['stylelint', 'eslint'],
-      \   'typescript': ['tsserver', 'eslint'],
+      \   'typescript': ['tsserver', 'eslint', 'tslint'],
       \   'tsx': ['tsserver', 'eslint'],
       \   'cs': ['csc'],
       \   'vue': ['eslint']
@@ -136,7 +136,7 @@ let g:ale_linters = {
 
 let g:ale_fixers = {
       \    'javascript': ['eslint'],
-      \    'typescript': ['prettier', 'eslint'],
+      \    'typescript': ['prettier', 'eslint', 'tslint'],
       \    'vue': ['eslint'],
       \    'cs': ['uncrustify'],
       \    'scss': ['prettier'],
