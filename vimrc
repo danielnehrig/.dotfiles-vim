@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'rainglow/vim'
 "Plug 'morhetz/gruvbox'
 Plug 'Dave-Elec/gruvbox'
+Plug 'joshdick/onedark.vim'
 Plug 'sainnhe/gruvbox-material'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -80,10 +81,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'dominickng/fzf-session.vim'
 
 "==== Snippets
-Plug 'isRuslan/vim-es6'
 Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'jamescarr/snipmate-nodejs'
 Plug 'mattn/emmet-vim'
 Plug 'aperezdc/vim-template'
 
