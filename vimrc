@@ -41,6 +41,8 @@ Plug 'henrik/vim-yaml-helper'
 "= JS / TS
 Plug 'moll/vim-node'
 Plug 'leafgarland/typescript-vim'
+"= RUST
+Plug 'rust-lang/rust.vim'
 
 "==== Testing
 Plug 'vim-test/vim-test'
