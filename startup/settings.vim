@@ -110,44 +110,49 @@ let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
-let g:tagbar_type_typescript = {
-      \ 'ctagstype': 'typescript',
-      \ 'kinds': [
-      \ 'c:classes',
-      \ 'n:modules',
-      \ 'f:functions',
-      \ 'v:variables',
-      \ 'v:varlambdas',
-      \ 'm:members',
-      \ 'i:interfaces',
-      \ 'e:enums',
-      \ ]
-      \ }
+let g:ale_linters = {}
+let g:ale_linters['javascript'] = ['eslint']
+let g:ale_linters['typescript'] = ['eslint']
+let g:ale_linters['typescriptreact'] = ['eslint']
+let g:ale_linters['markdown'] = []
+let g:ale_linters['graphql'] = []
+let g:ale_linters['rust'] = ['rls']
 
-" ALE Settings
-let g:ale_linters = {
-      \   'javascript': ['eslint'],
-      \   'jsx': ['stylelint', 'eslint'],
-      \   'typescript': ['tsserver', 'eslint', 'tslint'],
-      \   'tsx': ['tsserver', 'eslint'],
-      \   'cs': ['csc'],
-      \   'vue': ['eslint']
-      \}
-
-let g:ale_fixers = {
-      \    'javascript': ['eslint'],
-      \    'typescript': ['prettier', 'eslint', 'tslint'],
-      \    'vue': ['eslint'],
-      \    'cs': ['uncrustify'],
-      \    'scss': ['prettier'],
-      \    'html': ['prettier']
-      \}
+let g:ale_fixers = {}
+let g:ale_fixers['javascript'] = ['eslint']
+let g:ale_fixers['typescript'] = ['eslint']
+let g:ale_fixers['typescriptreact'] = ['prettier']
+let g:ale_fixers['markdown'] = ['prettier']
+let g:ale_fixers['html'] = ['prettier']
+let g:ale_fixers['ruby'] = ['prettier']
+let g:ale_fixers['json'] = ['prettier']
+let g:ale_fixers['graphql'] = ['prettier']
+let g:ale_fixers['scss'] = ['prettier']
+let g:ale_fixers['css'] = ['prettier']
+let g:ale_fixers['rust'] = ['rustfmt']
 let g:ale_fix_on_save = 1
+let g:ale_lint_on_enter = 1
+let g:ale_lint_on_insert_leave = 1
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 'normal'
+" let g:ale_sign_error = ' '
+" let g:ale_sign_warning = ' '
+hi ALEError guifg=#000000 guibg=#ffe3e3
+hi ALEErrorSign guifg=#ffe3e3 guibg=#ffe3e3
+hi ALEWarning guifg=#00000 guibg=#fff3bf
+hi ALEWarningSign guifg=#fff3bf guibg=#fff3bf
+let g:ale_completion_enabled = 0
+let g:ale_lint_delay = 0
+let g:ale_javascript_eslint_executable = 'eslint_d'
+let g:ale_typescript_eslint_executable = 'eslint_d'
+let g:ale_javascript_eslint_use_global = 1
+let g:ale_typescript_eslint_use_global = 1
 
 " airline settings
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#ale#enabled = 1
 
 let g:gitgutter_realtime = 1
 let g:gitgutter_eager = 0
@@ -185,10 +190,6 @@ let g:startify_lists = [
       \ { 'type': 'sessions',  'header': ['   Saved sessions']  },
       \ ]
 
-let g:test#javascript#runner = 'jest'
-let g:test#typescript#runner = 'jest'
-let g:test#strategy = 'neomake'
-
 " returns all modified files of the current git repo
 " `2>/dev/null` makes the command fail quietly, so that when we are not
 " in a git repo, the list will be empty
@@ -203,16 +204,6 @@ function! s:gitUntracked()
     return map(files, "{'line': v:val, 'path': v:val}")
 endfunction
 
-" When writing a buffer (no delay).
-call neomake#configure#automake('w')
-" When writing a buffer (no delay), and on normal mode changes (after 750ms).
-call neomake#configure#automake('nw', 750)
-" When reading a buffer (after 1s), and when writing (no delay).
-call neomake#configure#automake('rw', 1000)
-" Full config: when writing or reading a buffer, and on changes in insert and
-" normal mode (after 500ms; no delay when writing).
-call neomake#configure#automake('nrwi', 500)
-
 let g:startify_change_to_dir = 0
 let g:startify_lists = [
         \ { 'type': 'files',     'header': ['   MRU']            },
@@ -224,36 +215,5 @@ let g:startify_lists = [
         \ { 'type': 'commands',  'header': ['   Commands']       },
         \ ]
 
-" initially empty status
-let g:testing_status = ''
-
-" Start test
-function! TestStarted() abort
-  let g:testing_status = 'Test ⌛'
-endfunction
-
-" Show message when all tests are passing
-function! TestFinished() abort
-  let context = g:neomake_hook_context
-  if context.jobinfo.exit_code == 0
-    let g:testing_status = 'Test ✅'
-  endif
-  if context.jobinfo.exit_code == 1
-    let g:testing_status = 'Test ❌'
-  endif
-endfunction
-augroup neomake_hook
-  au!
-  autocmd User NeomakeJobFinished call TestFinished()
-  autocmd User NeomakeJobStarted call TestStarted()
-augroup END
-
 let g:ycm_confirm_extra_conf = 0
-let g:test#javascript#jest#executable = 'npx jest --config ./app/views/jest.config.js --forceExit --detectOpenHandles'
-let g:test#typescript#jest#executable = 'npx jest --config ./app/views/jest.config.js --forceExit --detectOpenHandles'
-let g:test#ts#jest#executable = 'npx jest --config ./app/views/jest.config.js --forceExit --detectOpenHandles'
-let g:test#js#jest#executable = 'npx jest --config ./app/views/jest.config.js --forceExit --detectOpenHandles'
-let g:test#preserve_screen = 1
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-let g:NERDTreeMinimalUI = 1
-let g:NERDTreeAutoDeleteBuffer = 1"

@@ -14,9 +14,6 @@ vno <up> <Nop>
 
 "============== Custom Mappings ===============
 " general mapping
-noremap <F7> :set expandtab!<CR>
-nmap <Leader>h :tabnew <CR>
-
 "turn off search highlighting
 nmap <C-h> :noh<CR>
 
@@ -39,14 +36,6 @@ nmap [c [czz
 " default to very magic
 no / /\v
 
-" g<Ctrl+o> to create a new line above cursor (Ctrl to prevent collision with 'go' command)
-nmap g<C-O> o<ESC>k
-" gO to create a new line below cursor in normal mode
-nmap gO O<ESC>j
-
-
-
-
 "I really hate that things don't auto-center
 nmap G Gzz
 nmap n nzz
@@ -60,10 +49,10 @@ nmap <Leader>c" "_di"Pa
 nmap <Leader>r' '_di'P
 nmap <Leader>c' '_di'Pa
 
+" hunk git
 nmap ]h <Plug>(GitGutterNextHunk)
 nmap [h <Plug>(GitGutterPrevHunk)
 
-nmap <Leader>n :NERDTreeToggle<CR>
 nmap <space>b :Buffers<CR>
 nmap <C-p> :Files<CR>
 nmap <C-]> :YcmCompleter GoTo<CR>
@@ -93,4 +82,3 @@ nnoremap <space>pf :Sessions<CR>
 
 " " `SPC l l` - list sessions / switch to different project
 nnoremap <leader>ll :SClose<CR>
-nnoremap <leader>N :NERDTreeFind<CR>
