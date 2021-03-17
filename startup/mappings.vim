@@ -60,13 +60,6 @@ nmap <space>yr :YcmCompleter GoToReferences<CR>
 nmap <space>[ :YcmCompleter FixIt<CR>
 nmap <space>a :ALEFix<CR>
 
-let g:UltiSnipsExpandTrigger="<c-s>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
 

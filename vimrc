@@ -29,6 +29,8 @@ Plug 'henrik/vim-yaml-helper'
 "= JS / TS
 Plug 'moll/vim-node'
 Plug 'leafgarland/typescript-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 
 "==== Utility
 Plug 'unblevable/quick-scope'
@@ -46,11 +48,13 @@ Plug 'adelarsq/vim-matchit'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/vim-slash'
+Plug 'sheerun/vim-polyglot'
 
 "==== File Managment
 if has('nvim')
   "Plug 'kevinhwang91/rnvimr'
 endif
+Plug 'preservim/nerdtree'
 Plug 'tpope/vim-vinegar'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
@@ -64,6 +68,12 @@ Plug 'aperezdc/vim-template'
 "==== git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+
+"==== test
+Plug 'janko-m/vim-test' " run test from vim
+Plug 'neomake/neomake' " runs make asynchronously in background
+Plug 'tpope/vim-projectionist'
+Plug 'tpope/vim-dispatch'
 
 "==== vim extension
 "Plug 'tomtom/tlib_vim'
@@ -85,8 +95,6 @@ source ~/.vim/startup/commands.vim
 source ~/.vim/startup/functions.vim
 source ~/.vim/startup/mappings.vim
 source ~/.vim/startup/settings.vim
-source ~/.vim/startup/rnvim.vim
-source ~/.vim/startup/which.vim
 source ~/.vim/plugged/lsp-examples/lsp.vim
 " source ~/.vim/startup/coc.vim
 
