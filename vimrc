@@ -28,6 +28,16 @@ Plug 'xavierchow/vim-swagger-preview'
 Plug 'henrik/vim-yaml-helper'
 "= JS / TS
 Plug 'sheerun/vim-polyglot'
+"= RUST
+Plug 'rust-lang/rust.vim'
+
+"==== Testing
+Plug 'vim-test/vim-test'
+Plug 'tpope/vim-dispatch'
+Plug 'tyewang/vimux-jest-test'
+
+"==== Debugging
+Plug 'eliba2/vim-node-inspect'
 
 "==== Utility
 Plug 'unblevable/quick-scope'
