@@ -93,15 +93,15 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
 " ale settings
 let g:ale_linters = {}
 let g:ale_linters['javascript'] = ['eslint']
-let g:ale_linters['typescript'] = ['eslint', 'typecheck']
-let g:ale_linters['typescriptreact'] = ['eslint', 'typecheck']
+let g:ale_linters['typescript'] = ['eslint', 'tsserver']
+let g:ale_linters['typescriptreact'] = ['eslint', 'tsserver']
 let g:ale_linters['markdown'] = []
 let g:ale_linters['rust'] = ['rls']
 
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier', 'eslint']
 let g:ale_fixers['typescript'] = ['prettier', 'eslint']
-let g:ale_fixers['typescriptreact'] = ['prettier']
+let g:ale_fixers['typescriptreact'] = ['prettier', 'eslint']
 let g:ale_fixers['markdown'] = ['prettier']
 let g:ale_fixers['html'] = ['prettier']
 let g:ale_fixers['ruby'] = ['prettier']
@@ -144,8 +144,8 @@ let g:gitgutter_eager = 0
 
 " YCM SETTINGS
 " make YCM compatible with UltiSnips (using supertab)
-" let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-" let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 " let g:SuperTabDefaultCompletionType = '<C-n>'
 " better key bindings for UltiSnipsExpandTrigger
 " let g:UltiSnipsExpandTrigger = "<tab>"
@@ -158,12 +158,12 @@ let g:ycm_enable_diagnostic_highlighting = 0
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 " let g:ycm_log_level='debug'
-" let g:ycm_semantic_triggers = {
-"       \   'css': [ 're!^\s{2}', 're!:\s+' ],
-"       \   'scss': [ 're!\s{2}', 're!:\s+' ],
-"       \   'javascript': [ '.', ':', '/', "'", '"', 'from', "re!import .* from '"],
-"       \   'sass': [ 're!\s{2}', 're!:\s+' ],
-"       \ }
+let g:ycm_semantic_triggers = {
+      \   'css': [ 're!^\s{2}', 're!:\s+' ],
+      \   'scss': [ 're!\s{2}', 're!:\s+' ],
+      \   'javascript': [ '.', ':', '/', "'", '"', 'from', "re!import .* from '"],
+      \   'sass': [ 're!\s{2}', 're!:\s+' ],
+      \ }
 
 " Time out on key codes but not mappings.
 " Basically this makes terminal Vim work sanely.
@@ -225,3 +225,6 @@ augroup neomake_hook
   autocmd User NeomakeJobFinished call TestFinished()
   autocmd User NeomakeJobStarted call TestStarted()
 augroup END
+
+set efm+=%.%#\ at\ %f:%l:%c,%.%#\ at\ %.%#(%f:%l:%c)
+set efm+=%.%#\ at\ %.%#(%f:%l:%c),%-G%.%#
