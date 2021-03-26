@@ -92,7 +92,3 @@ source ~/.vim/startup/functions.vim
 source ~/.vim/startup/mappings.vim
 source ~/.vim/startup/settings.vim
 source ~/.vim/plugged/lsp-examples/lsp.vim
-
-" Compile and Run settings
-source ~/.vim/startup/compile.vim
-source ~/.vim/startup/run.vim
