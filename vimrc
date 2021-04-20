@@ -40,6 +40,7 @@ Plug 'tyewang/vimux-jest-test'
 Plug 'eliba2/vim-node-inspect'
 
 "==== Utility
+Plug 'dstein64/vim-startuptime'
 Plug 'unblevable/quick-scope'
 Plug 'junegunn/vim-peekaboo'
 Plug 'mhinz/vim-startify'
